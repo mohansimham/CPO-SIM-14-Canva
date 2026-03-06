@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPO SIM 14 — Canva | CXO Simulabs</title>
+<meta name="description" content="Master user testing and validation through Canva's pivotal decisions. A CPO Track simulation by CXO Simulabs.">
+<link rel="canonical" href="https://mohansimham.github.io/CPO-SIM-14-Canva/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CPO SIM 14 — Canva | CXO Simulabs">
+<meta property="og:description" content="Master user testing and validation through Canva's pivotal decisions. Test your product instincts through 10 real scenarios.">
+<meta property="og:url" content="https://mohansimham.github.io/CPO-SIM-14-Canva/">
+<meta property="og:site_name" content="CXO Simulabs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CPO SIM 14 — Canva | CXO Simulabs">
+<meta name="twitter:description" content="Master user testing and validation through Canva's pivotal decisions. Test your product instincts through 10 real scenarios.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"CPO SIM 14 — Canva","url":"https://mohansimham.github.io/CPO-SIM-14-Canva/","description":"Master user testing and validation through Canva's pivotal decisions. A CPO Track simulation by CXO Simulabs.","applicationCategory":"Education","provider":{"@type":"Organization","name":"CXO Simulabs","url":"https://www.cxosimulabs.com"}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4J0M6TE3E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z4J0M6TE3E');</script>
+<style>
+:root {
+  --navy:#1a1a2e; --navy-mid:#16213e; --red:#e23744;
+  --accent:#00C4CC; --accent-light:#e0f9fa;
+  --white:#fff; --light:#f7f7f9; --border:#e5e7eb;
+  --text:#1f2937; --muted:#6b7280;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--light);color:var(--text);line-height:1.6;}
+.phase{display:none;}
+.phase.active{display:block;}
+
+/* NAV */
+.nav{background:var(--navy);padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-logo{color:#fff;font-weight:800;font-size:1.1em;letter-spacing:.5px;}
+.nav-logo span{color:var(--red);}
+.nav-track{background:rgba(0,196,204,.15);border:1px solid rgba(0,196,204,.3);color:#00b3ba;padding:4px 12px;border-radius:20px;font-size:.75em;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.nav-sims{display:flex;gap:4px;}
+.nav-sim{color:#778;text-decoration:none;font-size:.78em;padding:4px 10px;border-radius:6px;transition:all .2s;}
+.nav-sim:hover{color:#fff;background:rgba(255,255,255,.08);}
+.nav-sim.current{color:var(--accent);font-weight:600;}
+
+/* HERO BAND */
+.sim-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:48px 32px 40px;text-align:center;}
+.sim-band .eyebrow{display:inline-block;background:rgba(0,196,204,.15);border:1px solid rgba(0,196,204,.35);color:#00b3ba;padding:5px 16px;border-radius:20px;font-size:.75em;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:16px;}
+.sim-band h1{color:#fff;font-size:2em;font-weight:900;margin-bottom:8px;}
+.sim-band p{color:#778899;font-size:1em;max-width:520px;margin:0 auto;}
+
+/* CARD */
+.card{background:var(--white);border-radius:14px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);max-width:620px;margin:0 auto;}
+.center-wrap{padding:40px 24px;}
+
+/* FORM */
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:.85em;font-weight:600;color:var(--text);margin-bottom:6px;}
+.form-group input{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:8px;font-size:.95em;font-family:'Inter',sans-serif;transition:border-color .2s;outline:none;}
+.form-group input:focus{border-color:var(--accent);}
+.form-note{font-size:.8em;color:var(--muted);margin-top:8px;}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95em;cursor:pointer;border:none;transition:all .2s;font-family:'Inter',sans-serif;}
+.btn-primary{background:var(--accent);color:#fff;width:100%;}
+.btn-primary:hover{background:#00a3aa;transform:translateY(-1px);}
+.btn-outline{background:transparent;border:2px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.btn-navy{background:var(--navy);color:#fff;width:100%;}
+.btn-navy:hover{background:var(--navy-mid);}
+.error-msg{color:#dc2626;font-size:.82em;margin-top:8px;display:none;}
+.success-msg{color:#059669;font-size:.82em;margin-top:8px;display:none;}
+
+/* OTP */
+.otp-input{letter-spacing:8px;font-size:1.4em;text-align:center;font-weight:700;}
+.otp-timer{font-size:.8em;color:var(--muted);text-align:center;margin-top:8px;}
+.resend-link{color:var(--accent);cursor:pointer;text-decoration:underline;}
+
+/* INTRO */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+.intro-card{background:var(--light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);}
+.intro-card h4{font-size:.88em;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.intro-card p{font-size:.82em;color:var(--muted);}
+.attempt-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent-light);color:var(--accent);padding:6px 14px;border-radius:20px;font-size:.82em;font-weight:700;margin-bottom:20px;}
+
+/* QUESTIONS */
+.q-wrap{max-width:760px;margin:0 auto;padding:32px 24px;}
+.progress-bar-wrap{background:var(--white);border-bottom:1px solid var(--border);padding:14px 32px;}
+.progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;max-width:760px;margin-left:auto;margin-right:auto;}
+.progress-label{font-size:.82em;font-weight:600;color:var(--muted);}
+.progress-track{height:5px;background:#e5e7eb;border-radius:3px;max-width:760px;margin:0 auto;}
+.progress-fill{height:5px;background:var(--accent);border-radius:3px;transition:width .4s ease;}
+.scenario-box{background:var(--white);border-radius:12px;padding:28px;margin-bottom:24px;border-left:4px solid var(--accent);}
+.scenario-label{font-size:.72em;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:10px;}
+.scenario-text{font-size:.93em;color:#374151;line-height:1.75;white-space:pre-line;}
+.scenario-text strong{display:block;color:var(--navy);font-weight:700;margin-top:14px;margin-bottom:4px;font-size:.95em;}
+.q-text{font-size:1.05em;font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.5;}
+.options{display:flex;flex-direction:column;gap:12px;}
+.option{background:var(--white);border:2px solid var(--border);border-radius:10px;padding:16px 18px;cursor:pointer;transition:all .2s;font-size:.93em;line-height:1.5;}
+.option:hover{border-color:var(--accent);background:var(--accent-light);}
+.option.locked{pointer-events:none;cursor:default;}
+.feedback-box{background:#f8fafc;border-radius:10px;padding:20px;margin-top:20px;border-left:3px solid var(--navy);font-size:.9em;color:#374151;line-height:1.7;}
+.feedback-box .fb-label{font-weight:700;color:var(--navy);margin-bottom:6px;font-size:.85em;text-transform:uppercase;letter-spacing:.5px;}
+.next-btn-wrap{margin-top:24px;text-align:right;}
+
+/* RESULTS */
+.results-wrap{max-width:800px;margin:0 auto;padding:40px 24px;}
+.score-ring-wrap{text-align:center;margin:24px 0;}
+.score-ring{position:relative;display:inline-block;}
+.score-ring canvas{display:block;}
+.score-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.score-num{font-size:2.4em;font-weight:900;color:var(--navy);}
+.score-pct{font-size:.85em;color:var(--muted);font-weight:600;}
+.tier-badge{display:inline-block;padding:8px 24px;border-radius:20px;font-weight:700;font-size:.95em;margin:12px 0;}
+.tier-mastery{background:#dcfce7;color:#166534;}
+.tier-proficiency{background:#dbeafe;color:#1e40af;}
+.tier-competency{background:#fef9c3;color:#854d0e;}
+.tier-foundational{background:#fee2e2;color:#991b1b;}
+.results-summary{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;}
+.results-summary h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:16px;}
+.q-result-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.88em;}
+.q-result-row:last-child{border-bottom:none;}
+.q-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.dot-high{background:#059669;}
+.dot-mid{background:#f59e0b;}
+.dot-low{background:#dc2626;}
+.cert-section{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;text-align:center;}
+.cert-section h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:16px;}
+#certCanvas{border-radius:8px;max-width:100%;box-shadow:0 4px 20px rgba(0,0,0,.1);}
+.cert-buttons{display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap;}
+.cert-buttons .btn{width:auto;}
+
+/* HUB NAV */
+.hub-section{background:var(--navy);padding:60px 24px;}
+.hub-inner{max-width:800px;margin:0 auto;}
+.hub-section h3{color:#fff;font-size:1.2em;font-weight:700;margin-bottom:6px;}
+.hub-section p{color:#778899;font-size:.9em;margin-bottom:28px;}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+.hub-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:18px;text-decoration:none;transition:all .2s;display:block;}
+.hub-card:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);transform:translateY(-2px);}
+.hub-card.current-sim{border-color:rgba(0,196,204,.5);background:rgba(0,196,204,.08);}
+.hub-card .hw{font-size:.72em;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+.hub-card .hco{color:#fff;font-weight:700;font-size:.95em;}
+.hub-card .htopic{color:#556677;font-size:.78em;margin-top:4px;}
+.hub-card .hstatus{font-size:.72em;margin-top:8px;font-weight:600;}
+.status-done{color:#4ade80;}
+.status-available{color:var(--accent);}
+.status-locked{color:#445566;}
+
+/* ATTEMPT 2 PROMPT */
+.attempt2-wrap{background:var(--white);border-radius:12px;padding:28px;margin:20px 0;text-align:center;border:2px solid var(--accent);}
+.attempt2-wrap h3{color:var(--navy);font-weight:800;font-size:1.1em;margin-bottom:8px;}
+.attempt2-wrap p{color:var(--muted);font-size:.9em;margin-bottom:20px;}
+
+/* BLOCKED */
+.blocked-wrap{text-align:center;padding:60px 24px;max-width:500px;margin:0 auto;}
+.blocked-icon{font-size:3em;margin-bottom:16px;}
+.blocked-wrap h2{color:var(--navy);font-weight:800;margin-bottom:10px;}
+.blocked-wrap p{color:var(--muted);font-size:.95em;margin-bottom:24px;}
+
+/* CUMULATIVE FEEDBACK */
+.cumulative-card{margin:20px 0;}
+.cumulative-card h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.comp-bar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.comp-label{width:170px;font-size:.78em;font-weight:600;color:var(--text);flex-shrink:0;}
+.comp-track{flex:1;height:6px;background:#e5e7eb;border-radius:3px;overflow:hidden;}
+.comp-fill{height:6px;border-radius:3px;transition:width .6s ease;}
+.comp-pct{width:36px;font-size:.78em;font-weight:700;color:var(--muted);text-align:right;}
+.insight-box{margin-top:18px;background:var(--light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);}
+.insight-label{font-size:.72em;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:8px;}
+.insight-text{font-size:.9em;color:#374151;line-height:1.75;}
+.strengths-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.strength-tag{background:rgba(5,150,105,.1);border:1px solid rgba(5,150,105,.25);color:#065f46;padding:4px 10px;border-radius:12px;font-size:.75em;font-weight:600;}
+.gap-tag{background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.2);color:#991b1b;padding:4px 10px;border-radius:12px;font-size:.75em;font-weight:600;}
+
+/* NEXT SIM PROMO */
+.next-sim-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:12px;padding:20px 24px;margin:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.next-sim-banner h4{color:#fff;font-size:1em;font-weight:700;margin-bottom:4px;}
+.next-sim-banner p{color:#778899;font-size:.85em;}
+.btn-gold{background:linear-gradient(135deg,#c9a227,#e8c84a);color:#1a1a2e;font-weight:700;padding:10px 24px;border-radius:8px;border:none;cursor:pointer;font-size:.9em;text-decoration:none;display:inline-block;}
+.btn-gold:hover{opacity:.9;transform:translateY(-1px);}
+
+/* LEARN CARDS */
+.learn-wrap{max-width:620px;margin:0 auto;padding:32px 24px;}
+.learn-card{background:var(--white);border-radius:14px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);display:none;}
+.learn-card.active{display:block;}
+.learn-card .learn-icon{font-size:2.4em;margin-bottom:16px;}
+.learn-card h3{font-size:1.15em;font-weight:800;color:var(--navy);margin-bottom:6px;}
+.learn-card .learn-subtitle{font-size:.85em;color:var(--accent);font-weight:600;margin-bottom:16px;}
+.learn-card p{font-size:.92em;color:#374151;line-height:1.75;margin-bottom:14px;}
+.learn-card .learn-apply{background:var(--accent-light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);margin-top:16px;}
+.learn-card .learn-apply h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.learn-card .learn-apply p{font-size:.88em;color:#374151;margin-bottom:0;}
+.learn-card .learn-example{background:var(--light);border-radius:10px;padding:16px;margin-top:14px;}
+.learn-card .learn-example h4{font-size:.82em;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.learn-card .learn-example p{font-size:.85em;color:var(--muted);margin-bottom:0;font-style:italic;}
+.learn-card .learn-framework{background:#1a1a2e;border-radius:10px;padding:18px 20px;margin-top:14px;border-left:3px solid var(--accent);}
+.learn-card .learn-framework h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.learn-card .learn-framework ol{list-style:none;padding:0;margin:0;counter-reset:fw;}
+.learn-card .learn-framework ol li{counter-increment:fw;font-size:.84em;color:rgba(255,255,255,.75);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5;}
+.learn-card .learn-framework ol li:last-child{border-bottom:none;}
+.learn-card .learn-framework ol li::before{content:counter(fw) ". ";color:var(--accent);font-weight:700;}
+.learn-card .learn-framework ol li span{color:rgba(255,255,255,.4);font-size:.9em;}
+.learn-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
+.learn-dots{display:flex;gap:8px;}
+.learn-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:background .2s;}
+.learn-dot.active{background:var(--accent);}
+.learn-counter{font-size:.82em;color:var(--muted);font-weight:600;}
+
+/* SOURCES & DISCLAIMER */
+.sources-section{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;}
+.sources-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
+.sources-toggle h3{font-size:1em;font-weight:700;color:var(--navy);margin:0;}
+.sources-toggle .toggle-icon{font-size:1.2em;color:var(--muted);transition:transform .2s;}
+.sources-toggle .toggle-icon.open{transform:rotate(180deg);}
+.sources-content{display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
+.sources-content.open{display:block;}
+.sources-content ul{list-style:none;padding:0;}
+.sources-content li{font-size:.85em;color:#374151;padding:6px 0;border-bottom:1px solid #f0f0f0;line-height:1.6;}
+.sources-content li:last-child{border-bottom:none;}
+.sources-content li a{color:var(--accent);text-decoration:none;}
+.sources-content li a:hover{text-decoration:underline;}
+.sources-content .disclaimer-text{font-size:.82em;color:var(--muted);line-height:1.7;margin-top:14px;padding:14px;background:var(--light);border-radius:8px;}
+
+/* FOOTER */
+footer{background:#0d1117;color:#445566;text-align:center;padding:24px;font-size:.8em;}
+footer a{color:#556677;text-decoration:none;}
+
+@media(max-width:600px){
+  .nav-sims{display:none;}
+  .intro-grid{grid-template-columns:1fr;}
+  .sim-band h1{font-size:1.6em;}
+  .cert-buttons{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo" id="nav-logo" onclick="founderTap()">CXO <span>Simulabs</span></div>
+  <div class="nav-track">CPO Track</div>
+  <div class="nav-sims">
+    <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="nav-sim">SIM 1</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-2-Spotify/" class="nav-sim">SIM 2</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-3-Netflix/" class="nav-sim">SIM 3</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-4-Amazon/" class="nav-sim">SIM 4</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-5-Uber/" class="nav-sim">SIM 5</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-6-Zomato/" class="nav-sim">SIM 6</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-7-Slack/" class="nav-sim">SIM 7</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-8-Google/" class="nav-sim">SIM 8</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-9-Meta/" class="nav-sim">SIM 9</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-10-Shopify/" class="nav-sim">SIM 10</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-11-Duolingo/" class="nav-sim">SIM 11</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-12-LinkedIn/" class="nav-sim">SIM 12</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-13-Pinterest/" class="nav-sim">SIM 13</a>
+    <a href="#" class="nav-sim current">SIM 14</a>
+  </div>
+</nav>
+
+<!-- PHASE: BLOCKED -->
+<div id="phase-blocked" class="phase">
+  <div class="sim-band"><div class="eyebrow">CPO Simulation 14 · Canva</div><h1>Canva: User Testing & Validation</h1></div>
+  <div class="center-wrap">
+    <div class="blocked-wrap">
+      <div class="blocked-icon">🔒</div>
+      <h2>Both Attempts Used</h2>
+      <p>You've completed both attempts for this simulation. Each simulation allows 2 attempts to give you a chance to improve your score.</p>
+      <p style="margin-top:16px;color:var(--accent);font-weight:600;">Ready for your next challenge?</p>
+      <div style="margin-top:24px;">
+        <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="btn btn-navy" style="display:inline-block;text-decoration:none;width:auto;">Try SIM 1 — Airbnb →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: EMAIL GATE -->
+<div id="phase-email" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 14 · Canva</div>
+    <h1>Canva: User Testing & Validation</h1>
+    <p>10 pivotal moments. Real product decisions. How would you have built it?</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <h2 style="font-size:1.2em;font-weight:800;color:var(--navy);margin-bottom:6px;">Let's get started</h2>
+      <p style="font-size:.88em;color:var(--muted);margin-bottom:24px;">We'll send your personalised certificate to your email when you complete the simulation.</p>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="input-name" placeholder="First and last name" autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="input-email" placeholder="your@email.com" autocomplete="email">
+        <div class="form-note">Used to send your certificate and improve your experience. No spam.</div>
+      </div>
+      <div id="email-error" class="error-msg">Please enter a valid name and email address.</div>
+      <button class="btn btn-primary" onclick="sendOTP()" id="send-otp-btn" style="margin-top:8px;">Send Verification Code →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: OTP -->
+<div id="phase-otp" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 14 · Canva</div>
+    <h1>Check Your Email</h1>
+    <p>Enter the 6-digit code we just sent you.</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <h2 style="font-size:1.1em;font-weight:800;color:var(--navy);margin-bottom:6px;">Verify your email</h2>
+      <p style="font-size:.88em;color:var(--muted);margin-bottom:24px;">Code sent to <strong id="otp-email-display"></strong>. Expires in <span id="otp-timer">10:00</span>.</p>
+      <div class="form-group">
+        <label>Verification Code</label>
+        <input type="text" id="input-otp" class="otp-input" placeholder="000000" maxlength="6" inputmode="numeric">
+      </div>
+      <div id="otp-error" class="error-msg">Incorrect code. Please try again.</div>
+      <div id="otp-success" class="success-msg">✓ Email verified!</div>
+      <button class="btn btn-primary" onclick="verifyOTP()" style="margin-top:8px;">Verify & Start Simulation →</button>
+      <p style="font-size:.82em;color:var(--muted);margin-top:14px;text-align:center;">Didn't get it? <span class="resend-link" onclick="resendOTP()">Resend code</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: INTRO -->
+<div id="phase-intro" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 14 · Canva</div>
+    <h1>Canva: User Testing & Validation</h1>
+    <p>You're the Product Manager. 10 real scenarios. What do you decide?</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <div id="attempt-badge-display" class="attempt-badge">🎯 Attempt 1 of 2</div>
+      <h2 style="font-size:1.1em;font-weight:800;color:var(--navy);margin-bottom:10px;">What you'll be tested on</h2>
+      <div class="intro-grid">
+        <div class="intro-card"><h4>Research Design</h4><p>Choosing the right method — usability tests, surveys, A/B tests, interviews — for the question you need answered.</p></div>
+        <div class="intro-card"><h4>Prototype Testing</h4><p>Testing ideas before building them — from paper sketches to interactive prototypes to fake-door tests.</p></div>
+        <div class="intro-card"><h4>Signal vs. Noise</h4><p>Separating real user needs from edge cases, vocal minorities, and confirmation bias in research data.</p></div>
+        <div class="intro-card"><h4>Validation at Scale</h4><p>Moving from qualitative insights to quantitative proof — when to trust 5 users and when you need 50,000.</p></div>
+      </div>
+      <p style="font-size:.85em;color:var(--muted);margin-bottom:20px;">10 questions · Multiple choice · Feedback after every answer · ~15 minutes</p>
+      <button class="btn btn-primary" onclick="showPhase('learn')">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: LEARN -->
+<div id="phase-learn" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 14 · Canva</div>
+    <h1>Before You Begin</h1>
+    <p>A quick refresher on the frameworks you'll apply in this simulation.</p>
+  </div>
+  <div class="learn-wrap">
+
+
+    <div class="learn-card active" data-learn="0">
+      <div class="learn-icon">🔬</div>
+      <h3>Choosing the Right Research Method</h3>
+      <div class="learn-subtitle">Not every question needs the same answer.</div>
+      <p>The biggest mistake in user research is using the wrong method for the question you're trying to answer. Usability tests tell you if people CAN use something. Surveys tell you what people SAY they want. Analytics tell you what people DO. Interviews tell you WHY. Each method has blind spots: surveys miss behaviour, analytics miss motivation, usability tests miss context, and interviews miss scale. The art of user testing is matching the method to the question — and knowing when you need multiple methods to triangulate the truth.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Before starting any research, write down the specific question you need answered. Then ask: "Do I need to understand behaviour or attitudes? Do I need depth or breadth? Am I exploring or validating?" Exploration calls for qualitative methods (interviews, contextual inquiry). Validation calls for quantitative methods (A/B tests, surveys with statistical significance). Most product decisions need both: qualitative research to generate hypotheses, then quantitative research to validate them. Never skip straight to quantitative — you might be measuring the wrong thing precisely.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>When Canva expanded from graphic design to presentations, the team needed to understand whether non-designers would actually use a presentation tool. They didn't start with a survey asking "Would you use Canva for presentations?" (people say yes to everything). Instead, they ran contextual interviews watching people create presentations in PowerPoint and Google Slides, identifying pain points (finding templates, maintaining brand consistency, collaborating in real-time). Then they built a prototype and ran usability tests to validate that Canva's visual-first approach actually solved those pain points. Only after qualitative validation did they launch a beta and measure adoption quantitatively.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Research Method Selection Framework</h4>
+        <ol>
+          <li>Define the Question <span>— What specific decision will this research inform? Write it as a single question. Vague questions lead to useless research.</span></li>
+          <li>Behaviour vs. Attitude <span>— Do you need to know what people DO (use analytics, usability tests) or what they THINK (use surveys, interviews)?</span></li>
+          <li>Depth vs. Breadth <span>— Do you need rich context from a few users (qualitative) or statistical confidence from many (quantitative)?</span></li>
+          <li>Explore vs. Validate <span>— Are you generating hypotheses (explore with interviews, diary studies) or testing them (validate with A/B tests, surveys)?</span></li>
+          <li>Stage of Product <span>— Pre-build: concept testing, prototypes. During build: usability testing. Post-launch: analytics, surveys, A/B tests.</span></li>
+          <li>Time & Resource Constraints <span>— 1 day: guerrilla testing. 1 week: usability study. 1 month: full mixed-methods study. Match method to timeline.</span></li>
+          <li>Triangulation <span>— Use 2-3 methods that complement each other. If interviews and analytics tell the same story, you have confidence. If they conflict, dig deeper.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">1 of 4</span>
+        <div class="learn-dots"><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="1">
+      <div class="learn-icon">🧪</div>
+      <h3>Prototype Testing & Fake Doors</h3>
+      <div class="learn-subtitle">Test the idea, not the implementation.</div>
+      <p>You don't need to build a feature to test whether people want it. Prototype testing lets you validate demand, usability, and value proposition before writing a single line of production code. The spectrum ranges from low-fidelity (paper sketches, wireframes) to high-fidelity (clickable prototypes) to fake doors (real UI that measures intent without real functionality). The key insight: the fidelity of your prototype should match the fidelity of the question. Testing navigation? Low-fi wireframes work. Testing emotional response? You need high-fi visuals. Testing demand? A fake door with a waitlist captures real intent.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Start with the cheapest test that answers your question. A 30-minute paper prototype test with 5 users will uncover 85% of major usability issues. A clickable Figma prototype catches the remaining interaction problems. A fake-door test with a "Coming Soon" button on your live product measures real demand with real users (not survey respondents saying what they think you want to hear). The golden rule: never spend 3 months building something you could have invalidated in 3 days with a prototype. The best product teams have a "test before build" culture where no feature reaches engineering without user evidence.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>When Canva considered adding a video editing feature, they faced a critical question: would their core audience (non-designers making social media graphics) actually edit videos in Canva? Instead of building a full video editor, they ran a fake-door test: they added a "Create a Video" button to the homepage. Users who clicked saw a waitlist signup page. The click-through rate was 3x higher than expected, and 40% of clickers signed up for the waitlist — strong demand signal. Then they built a low-fi prototype of the video editor and tested it with waitlist users. The prototype revealed that users wanted simple video (trim, add text, transitions) not professional editing. This shaped the entire product direction and saved months of building the wrong thing.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Prototype Testing Ladder</h4>
+        <ol>
+          <li>Paper / Sketch <span>— Hand-drawn screens. Tests: information architecture, navigation flow, concept clarity. Time: 1-2 hours to create, 30 min to test.</span></li>
+          <li>Wireframe <span>— Digital low-fi screens (Balsamiq, Whimsical). Tests: layout, content hierarchy, user flow. Time: 1 day to create, 1 hour to test.</span></li>
+          <li>Clickable Prototype <span>— Interactive screens (Figma, Canva). Tests: interaction design, micro-interactions, task completion. Time: 2-3 days.</span></li>
+          <li>Wizard of Oz <span>— Real-looking UI, human-powered backend. Tests: full experience without building tech. Time: 1 week.</span></li>
+          <li>Fake Door / Painted Door <span>— Real button in live product, no backend. Tests: actual demand with real users. Time: 1 day to deploy.</span></li>
+          <li>Concierge MVP <span>— Deliver the service manually to a few users. Tests: value proposition and willingness to pay. Time: 1-2 weeks.</span></li>
+          <li>Beta / Limited Release <span>— Real feature, limited audience. Tests: retention, engagement, technical feasibility. Time: 2-4 weeks.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">2 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="2">
+      <div class="learn-icon">📊</div>
+      <h3>Signal vs. Noise in User Feedback</h3>
+      <div class="learn-subtitle">Five users told you X. Should you build it?</div>
+      <p>User feedback is full of traps. Vocal minorities sound louder than they are. Feature requests describe solutions, not problems. Users can't predict their own behaviour — they say they want simplicity but use complexity. Confirmation bias leads researchers to hear what they want to hear. The PM's job is to extract the signal (genuine unmet needs) from the noise (edge cases, aspirational answers, social desirability bias). The best PMs don't ask "What do users want?" They ask "What pattern of behaviour reveals an unmet need?"</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Apply the "5 Whys" to every feature request: the first answer is usually a solution ("I want a dark mode"). Ask why until you reach the underlying need ("I use Canva at night and the white screen hurts my eyes" → the need is reduced eye strain, dark mode is one solution). Look for convergence: if 4 out of 5 users mention the same problem in different words, that's signal. If 1 user has a passionate request, that's noise. Weight behavioural data over stated preferences: if users say they want feature X but analytics show they never use similar features, trust the analytics. The hierarchy of evidence: what people do > what people struggle with > what people say > what people predict they'd do.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>Canva's most-requested feature for years was "layers panel" — a Photoshop-style layer management system. Professional designers asked for it constantly. But Canva's user research revealed the signal behind the noise: most Canva users (non-designers) didn't even understand what layers were. They just wanted to move elements in front of or behind each other. Canva built "Position" controls (forward, backward, front, back) instead of a full layers panel — solving the underlying need (control element stacking) without the complexity (managing a layers hierarchy). Usage data proved the decision right: 60% of users used Position controls regularly, while the comparable feature in professional tools was used by less than 10% of users.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Feedback Interpretation Framework</h4>
+        <ol>
+          <li>Source Assessment <span>— Who is saying this? Power users, new users, churned users? Each group has different biases and different value to the product.</span></li>
+          <li>Frequency vs. Intensity <span>— Is this mentioned by many users (high frequency) or passionately by few (high intensity)? Frequency usually matters more.</span></li>
+          <li>Problem vs. Solution <span>— Is the user describing a problem or proposing a solution? Always dig for the problem. Solutions are the PM's job.</span></li>
+          <li>Behaviour Check <span>— Does the request match what users actually do? If users ask for advanced features but analytics show basic feature usage, trust behaviour.</span></li>
+          <li>Convergence Test <span>— Do multiple data sources point the same direction? (Interviews + analytics + support tickets = high confidence.)</span></li>
+          <li>Opportunity Sizing <span>— If we solved this, how many users benefit? What's the impact on retention, activation, or revenue?</span></li>
+          <li>Bias Audit <span>— Am I hearing this because I want to? Check for confirmation bias, recency bias, and survivorship bias in your interpretation.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">3 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="3">
+      <div class="learn-icon">🎯</div>
+      <h3>Validation at Scale</h3>
+      <div class="learn-subtitle">When to trust 5 users and when you need 50,000.</div>
+      <p>Qualitative research (5-8 users) is enough to find usability problems — Jakob Nielsen proved that 5 users find 85% of usability issues. But validating product-market fit, measuring conversion impact, or proving business value requires quantitative evidence: A/B tests with statistical significance, surveys with representative samples, or cohort analysis with enough data points. The transition from qualitative to quantitative is where many teams stumble: they either skip qualitative (building the wrong thing efficiently) or stay qualitative forever (never proving impact at scale).</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Use qualitative research to decide WHAT to build, and quantitative research to prove it WORKS. The flow: (1) Interviews reveal a pain point, (2) Prototype tests confirm users can use the solution, (3) Fake-door test confirms demand, (4) Beta launch measures engagement and retention, (5) A/B test proves the feature improves key metrics. Each stage has a kill criterion: if the prototype test shows fundamental confusion, stop. If the A/B test shows no lift, stop. Validation at scale means having the discipline to stop when the evidence says stop — even if you've invested months of work.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>Canva's expansion into enterprise (Canva for Teams) required validation at multiple scales. Qualitative: interviews with 30 marketing teams revealed the need for brand kits, approval workflows, and shared templates. Prototype: clickable prototypes tested with 8 teams validated the workflow. Fake door: a "Canva for Teams" landing page measured demand (15% click-through from existing users). Beta: 200 teams used an early version for 60 days — retention was 85%, far above consumer Canva's 40%. A/B test: teams with brand kit access created 3x more designs than teams without. Each stage built on the last, and each stage had a go/no-go threshold. The enterprise product launched with confidence because every assumption had been validated at the appropriate scale.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Validation Scale Framework</h4>
+        <ol>
+          <li>Concept Validation <span>— 5-8 interviews. Question: "Does this problem exist and do people care?" Kill criterion: fewer than 3 of 5 recognise the problem.</span></li>
+          <li>Usability Validation <span>— 5-8 usability tests. Question: "Can people use this solution?" Kill criterion: fewer than 4 of 5 complete the core task.</span></li>
+          <li>Demand Validation <span>— Fake door or landing page, 1000+ impressions. Question: "Do people want this enough to act?" Kill criterion: below 2% click-through.</span></li>
+          <li>Value Validation <span>— Beta with 50-200 users, 30+ days. Question: "Do people keep using it?" Kill criterion: D30 retention below your product baseline.</span></li>
+          <li>Impact Validation <span>— A/B test with statistical significance. Question: "Does this improve key metrics?" Kill criterion: no significant lift at 95% confidence.</span></li>
+          <li>Business Validation <span>— Revenue or conversion measurement. Question: "Does this create business value?" Kill criterion: unit economics don't work at projected scale.</span></li>
+          <li>Scale Validation <span>— Full launch with monitoring. Question: "Does this work for everyone, not just early adopters?" Kill criterion: metrics degrade as audience broadens.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">4 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="startSim()">Start Simulation →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- PHASE: QUESTIONS -->
+<div id="phase-questions" class="phase">
+  <div class="progress-bar-wrap">
+    <div class="progress-top">
+      <span class="progress-label" id="q-progress-label">Question 1 of 10</span>
+      <span class="progress-label" id="q-score-label">Score: 0</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+  <div class="q-wrap">
+    <div class="scenario-box">
+      <div class="scenario-label">Scenario</div>
+      <div class="scenario-text" id="q-scenario"></div>
+    </div>
+    <div class="q-text" id="q-question"></div>
+    <div class="options" id="q-options"></div>
+    <div class="feedback-box" id="q-feedback" style="display:none;">
+      <div class="fb-label">Expert Analysis</div>
+      <div id="q-feedback-text"></div>
+    </div>
+    <div class="next-btn-wrap">
+      <button class="btn btn-navy" id="next-btn" onclick="nextQuestion()" style="display:none;">Next Question →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: RESULTS -->
+<div id="phase-results" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">Simulation Complete</div>
+    <h1 id="results-heading">Your Results</h1>
+  </div>
+  <div class="results-wrap">
+
+    <div class="card" style="text-align:center;margin-bottom:20px;">
+      <div class="score-ring-wrap">
+        <div class="score-ring">
+          <canvas id="scoreRingCanvas" width="160" height="160"></canvas>
+          <div class="score-center">
+            <div class="score-num" id="result-pct">0%</div>
+            <div class="score-pct" id="result-score-label">0 / 0</div>
+          </div>
+        </div>
+      </div>
+      <div class="tier-badge" id="tier-badge">Strategic Mastery</div>
+      <p id="tier-feedback" style="color:var(--muted);font-size:.9em;max-width:480px;margin:0 auto;"></p>
+    </div>
+
+    <!-- Next Sim Banner (prominent) -->
+    <div class="next-sim-banner" id="next-sim-banner" style="display:none;">
+      <div>
+        <h4>Up next: SIM 1 — Airbnb</h4>
+        <p>User Testing · Validation Methods · Usability Research · 10 new decisions</p>
+      </div>
+      <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="btn-gold">Start SIM 1 →</a>
+    </div>
+
+    <div class="results-summary">
+      <h3>Decision Analysis — Expert Feedback on Every Choice</h3>
+      <div id="q-breakdown"></div>
+    </div>
+
+    <!-- Cumulative Feedback -->
+    <div class="card cumulative-card" id="cumulative-section">
+      <h3>Your CPO Profile</h3>
+      <p style="font-size:.82em;color:var(--muted);margin-bottom:20px;">Based on your decision patterns across all 10 scenarios</p>
+      <div id="competency-bars"></div>
+      <div class="insight-box">
+        <div class="insight-label">Strategic Insight</div>
+        <div class="insight-text" id="insight-text"></div>
+        <div style="margin-top:14px;">
+          <div style="font-size:.75em;font-weight:700;color:#059669;margin-bottom:6px;">STRENGTHS</div>
+          <div class="strengths-row" id="strength-tags"></div>
+        </div>
+        <div style="margin-top:12px;">
+          <div style="font-size:.75em;font-weight:700;color:#dc2626;margin-bottom:6px;">DEVELOP FURTHER</div>
+          <div class="strengths-row" id="gap-tags"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attempt 2 prompt (shown if attempt 1 done) -->
+    <div class="attempt2-wrap" id="attempt2-prompt" style="display:none;">
+      <h3>Try Attempt 2?</h3>
+      <p>Different questions, same competencies. Can you improve your score?</p>
+      <button class="btn btn-primary" onclick="startAttempt2()" style="width:auto;padding:12px 32px;">Start Attempt 2 →</button>
+    </div>
+
+    <div class="cert-section">
+      <h3>Your Certificate</h3>
+      <p style="font-size:.82em;color:var(--muted);margin-bottom:16px;">Download the certificate for Canva or the square badge for Instagram, WhatsApp and other social media.</p>
+      <canvas id="certCanvas" width="1200" height="850"></canvas>
+      <div class="cert-buttons" style="margin-top:14px;">
+        <button class="btn btn-navy" onclick="downloadCert()" style="width:auto;">↓ Certificate (Canva)</button>
+        <button class="btn btn-navy" onclick="downloadBadge()" style="width:auto;">↓ Badge (Instagram)</button>
+        <button class="btn btn-outline" onclick="shareCanva()" style="width:auto;">Share Canva</button>
+        <button class="btn btn-outline" onclick="shareTwitter()" style="width:auto;">Share X / Twitter</button>
+        <button class="btn btn-outline" onclick="shareWhatsApp()" style="width:auto;">Share WhatsApp</button>
+        <button class="btn btn-outline" onclick="copyLink()" style="width:auto;" id="copy-link-btn">Copy Link</button>
+      </div>
+      <!-- Hidden badge canvas -->
+      <canvas id="badgeCanvas" width="1080" height="1080" style="display:none;"></canvas>
+    </div>
+
+    <!-- Sources & Disclaimer -->
+    <div class="sources-section">
+      <div class="sources-toggle" onclick="this.querySelector('.toggle-icon').classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+        <h3>Sources & Disclaimer</h3>
+        <span class="toggle-icon">▼</span>
+      </div>
+      <div class="sources-content">
+        <ul>
+          <li>Canva company blog and newsroom — product launches, user research insights, and design philosophy — <a href="https://www.canva.com/newsroom/" target="_blank">canva.com/newsroom</a></li>
+          <li>Melanie Perkins, Cliff Obrecht, and Cameron Adams interviews — founding story, product vision, and growth strategy</li>
+          <li>Canva's design democratisation mission — expanding from designers to non-designers, enterprise, and education markets</li>
+          <li>Public reporting on Canva's valuation journey ($40B+), user growth (170M+ MAU), and product expansion strategy</li>
+          <li>Industry analyses on design tools, no-code platforms, and the creator economy from CB Insights, TechCrunch, and Forrester</li>
+          <li>UX research methodology literature — Nielsen Norman Group, "Lean UX" by Jeff Gothelf, "Inspired" by Marty Cagan</li>
+          <li>Canva developer documentation and platform APIs — integration ecosystem and enterprise features</li>
+        </ul>
+        <div class="disclaimer-text">
+          <strong>Disclaimer:</strong> CXO Simulabs is an independent educational platform. Canva and related marks are trademarks of Canva Pty Ltd. This simulation is not affiliated with, endorsed by, or sponsored by Canva Pty Ltd. All scenarios are inspired by publicly available information and may include dramatised elements for educational purposes. Dialogue attributed to individuals is fictional and does not represent actual statements. Financial figures are from public filings and published reports where available; some figures are approximations used for educational purposes. This is not a professional certification or accreditation.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HUB NAV -->
+  <div class="hub-section">
+    <div class="hub-inner">
+      <h3>CPO Track — All Simulations</h3>
+      <p>Each simulation tests a different set of CPO competencies. Start anywhere.</p>
+      <div class="hub-grid">
+        <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="hub-card">
+          <div class="hw">SIM 1</div>
+          <div class="hco">Airbnb</div>
+          <div class="htopic">Strategic Thinking · Stakeholder Mgmt · Risk</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-2-Spotify/" class="hub-card">
+          <div class="hw">SIM 2</div>
+          <div class="hco">Spotify</div>
+          <div class="htopic">Business Model · Porter's Five Forces · OKRs</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-3-Netflix/" class="hub-card">
+          <div class="hw">SIM 3</div>
+          <div class="hco">Netflix</div>
+          <div class="htopic">Jobs-to-Be-Done · A/B Testing · User Research</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-4-Amazon/" class="hub-card">
+          <div class="hw">SIM 4</div>
+          <div class="hco">Amazon Prime</div>
+          <div class="htopic">RICE · MoSCoW · Kano Model</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-5-Uber/" class="hub-card">
+          <div class="hw">SIM 5</div>
+          <div class="hco">Uber</div>
+          <div class="htopic">Market Sizing · Unit Economics · 5 Whys</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-6-Zomato/" class="hub-card">
+          <div class="hw">SIM 6</div>
+          <div class="hco">Zomato</div>
+          <div class="htopic">RICE · MoSCoW · Kano · ICE Scoring</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-7-Slack/" class="hub-card">
+          <div class="hw">SIM 7</div>
+          <div class="hco">Slack</div>
+          <div class="htopic">Rapid Prototyping · MVP · Pivot Strategy</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-8-Google/" class="hub-card">
+          <div class="hw">SIM 8</div>
+          <div class="hco">Google</div>
+          <div class="htopic">PRDs · Design Docs · Launch Review</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-9-Meta/" class="hub-card">
+          <div class="hw">SIM 9</div>
+          <div class="hco">Meta</div>
+          <div class="htopic">AI Feature Design · ML Lifecycle · AI Safety</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-10-Shopify/" class="hub-card">
+          <div class="hw">SIM 10</div>
+          <div class="hco">Shopify</div>
+          <div class="htopic">Roadmapping · Prioritisation · Platform Evolution</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-11-Duolingo/" class="hub-card">
+          <div class="hw">SIM 11</div>
+          <div class="hco">Duolingo</div>
+          <div class="htopic">Data Storytelling · Visualisation · Metrics</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-12-LinkedIn/" class="hub-card">
+          <div class="hw">SIM 12</div>
+          <div class="hco">LinkedIn</div>
+          <div class="htopic">Growth Loops · Retention · Network Effects</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-13-Pinterest/" class="hub-card">
+          <div class="hw">SIM 13</div>
+          <div class="hco">Pinterest</div>
+          <div class="htopic">Platform Strategy · Ecosystem Design · Competitive Moats</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <div class="hub-card current-sim">
+          <div class="hw">SIM 14 · Current</div>
+          <div class="hco">Canva</div>
+          <div class="htopic">Research Design · Usability Testing · Validation</div>
+          <div class="hstatus status-done">✓ Completed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 CXO Simulabs · <a href="https://www.cxosimulabs.com">cxosimulabs.com</a> · <a href="https://www.cxosimulabs.com/privacy.html">Privacy</a> · <a href="https://www.cxosimulabs.com/terms.html">Terms</a></p>
+    <p style="margin-top:8px;font-size:.75em;color:#334455;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;">CXO Simulabs is an independent educational platform. Canva and related marks are trademarks of Canva Pty Ltd This simulation is not affiliated with, endorsed by, or sponsored by Canva Pty Ltd Scenarios are inspired by publicly available information and may include dramatised elements for educational purposes. This is not a professional certification. All dialogue is fictional and does not represent actual statements by any named individual.</p>
+  </footer>
+</div>
+
+<script>
+// ─── FOUNDER MODE ─────────────────────────────────────────
+let _founderTaps=0, _founderTimer=null;
+function founderTap(){
+  _founderTaps++;
+  clearTimeout(_founderTimer);
+  _founderTimer=setTimeout(()=>_founderTaps=0,600);
+  if(_founderTaps>=3){ enterFounderMode(); _founderTaps=0; }
+}
+function enterFounderMode(){
+  Object.values(LS).forEach(k=>localStorage.removeItem(k));
+  state.name='Founder Preview';
+  state.email='founder@cxosimulabs.com';
+  state.currentAttempt=1;
+  // Badge
+  if(!document.getElementById('founder-badge')){
+    const b=document.createElement('div');
+    b.id='founder-badge';
+    b.style.cssText='position:fixed;bottom:16px;right:16px;background:#1a1a2e;color:#fff;padding:8px 16px;border-radius:8px;font-size:.78em;font-weight:600;z-index:9999;border:1px solid rgba(226,55,68,.4);cursor:pointer;';
+    b.innerHTML='🔧 Founder Preview &nbsp;<span style="color:#e23744;" onclick="exitFounderMode()">✕ Exit</span>';
+    document.body.appendChild(b);
+  }
+  document.getElementById('attempt-badge-display').textContent='🔧 Preview Mode';
+  showPhase('intro');
+}
+function exitFounderMode(){
+  const b=document.getElementById('founder-badge');
+  if(b) b.remove();
+  location.reload();
+}
+
+// ─── COMPETENCY MAP ───────────────────────────────────────
+const COMP_MAP = [
+  {name:'Research Design'},
+  {name:'Usability Testing'},
+  {name:'Prototype Validation'},
+  {name:'Survey Design'},
+  {name:'User Interview Skills'},
+  {name:'Data Interpretation'},
+  {name:'Experiment Design'},
+  {name:'Insight Synthesis'},
+  {name:'Stakeholder Communication'},
+  {name:'Validation Strategy'},
+];
+
+// ─── CONFIG ───────────────────────────────────────────────
+const EJS_KEY      = 'ABWpMkWPOTsO_gQWG';
+const EJS_SERVICE  = 'service_a6x573k';
+const EJS_TEMPLATE = 'template_xt90q9j';
+emailjs.init(EJS_KEY);
+
+const LS = {
+  name:      'cxo_cpo14_name',
+  email:     'cxo_cpo14_email',
+  attempts:  'cxo_cpo14_attempts',
+  scores:    'cxo_cpo14_scores',
+};
+
+// ─── STATE ────────────────────────────────────────────────
+let state = {
+  name:'', email:'',
+  otp:'', otpExpiry:0, otpAttempts:0,
+  timerInterval:null,
+  currentAttempt:1,
+  currentQ:0,
+  answers:[],
+  totalScore:0, maxScore:0,
+};
+
+// ─── QUESTIONS ────────────────────────────────────────────
+const Q = {
+  1: [
+    {
+      scenario:`2013 — Canva's First Usability Test: Can Non-Designers Actually Design?\n\nCanva is about to launch its beta. The core premise is radical: anyone — not just designers — can create professional-quality graphics. Melanie Perkins and the team have built a drag-and-drop editor with templates, but they've never tested it with truly non-technical users.\n\nYou run the first usability study with 8 participants: 2 small business owners, 2 teachers, 2 social media managers, and 2 university students. None have design experience.\n\nResults:\n• 6 of 8 users can create a social media post in under 5 minutes\n• But 5 of 8 struggle with the text editing — they try to double-click text (like Word) but Canva requires single-click\n• 3 of 8 can't find the "Download" button (it's labelled "Publish")\n• 7 of 8 say they'd use this instead of PowerPoint for social media graphics\n• The 2 users who struggled most are both over 50`,
+      question:`How do you prioritise the usability findings before launch?`,
+      options:[
+        {text:`Fix the text editing interaction immediately — it affects 5 of 8 users and touches the core action (editing text). Rename "Publish" to "Download." Launch after these fixes. The age-related struggles are too small a sample to act on.`, score:3, feedback:`Excellent prioritisation. You're fixing the two most impactful issues: text editing (affects 63% of users, core workflow) and the "Download" label (affects 38%, critical export action). The text editing fix aligns Canva with existing mental models (double-click to edit, like every other app). The "Publish" → "Download" fix uses familiar language for the target audience. You're right to not over-index on the age-related finding with only 2 data points — note it for future research but don't redesign around it.`},
+        {text:`Run a larger study with 30 users before making any changes. 8 users isn't enough to be confident, especially for a product launch. We need statistical significance before changing core interactions.`, score:1, feedback:`This misunderstands the purpose of qualitative usability testing. Jakob Nielsen's research proves that 5 users find 85% of usability problems. You don't need statistical significance for usability issues — you need it for measuring conversion rates and A/B tests. When 5 of 8 users stumble on the same interaction, that's a clear usability problem regardless of sample size. Delaying the fix for a larger study wastes time and delays the launch while users struggle with a known issue.`},
+        {text:`Ship as-is and measure the drop-off points in analytics after launch. Real user data at scale is more reliable than a small usability study. We can fix issues in the first update based on actual usage patterns.`, score:1, feedback:`This is the "ship and pray" approach. Yes, analytics will eventually reveal the problems — but at the cost of first impressions. Users who struggle with text editing in their first session may never return. You'll see the drop-off in analytics, but you won't see the users who left forever. Usability tests exist precisely to catch these problems BEFORE real users encounter them. The 8-user test already told you what's broken. Fix it now.`},
+        {text:`Redesign the entire text editing experience and add an onboarding tutorial that walks new users through every feature. The core experience needs to be flawless before launch, and a tutorial prevents all confusion.`, score:1, feedback:`Over-engineering the solution. The text editing fix is simple: support both single-click and double-click to edit text (match existing mental models). A full redesign delays launch for weeks. And tutorials are a crutch — if your product needs a tutorial, the product is the problem, not the user's knowledge. Canva's entire value proposition is "so easy you don't need training." An onboarding tutorial contradicts that positioning. Fix the specific interaction, don't add a band-aid tutorial.`}
+      ],
+      competency:[0,1,5]
+    },
+    {
+      scenario:`2015 — Testing Canva's "Magic Resize" Feature\n\nCanva's team has built "Magic Resize" — a feature that instantly resizes any design to fit different social media platforms (e.g., Instagram post → Facebook cover → Twitter header). It's technically impressive but requires a paid subscription.\n\nBefore launching, you need to validate three things:\n1. Do users understand what Magic Resize does?\n2. Can users actually use it successfully?\n3. Will users pay for it?\n\nYou have 2 weeks and a budget for 20 research participants. The engineering team is ready to launch as soon as you give the green light.`,
+      question:`How do you structure the validation research?`,
+      options:[
+        {text:`Week 1: Run 5 usability tests where users try to resize a design using a prototype. Observe comprehension and task completion. Week 2: Run a fake-door test with 15 free users — show them "Magic Resize" with a paywall and measure click-through and conversion intent.`, score:3, feedback:`This is the ideal two-phase validation approach. Week 1 answers questions 1 and 2 (comprehension + usability) with qualitative depth — 5 users will reveal major usability issues and whether the concept makes sense. Week 2 answers question 3 (willingness to pay) with a real behavioural signal — not "would you pay?" (unreliable) but "do you click the upgrade button when presented with this feature?" (reliable). The fake-door test with 15 users gives you a directional demand signal. You've answered all 3 questions in 2 weeks with appropriate methods for each.`},
+        {text:`Send a survey to 1,000 existing Canva users asking: "Would you pay $X/month for a feature that automatically resizes your designs?" Include screenshots and pricing options. Use the survey results to validate demand.`, score:1, feedback:`Surveys about hypothetical willingness to pay are notoriously unreliable. People systematically overstate their willingness to pay in surveys (by 30-50% according to research). Showing screenshots doesn't test usability — users might love the concept but not be able to use it. And a survey can't tell you whether users understand the feature in context. You'd get a false positive on all three questions: high stated interest, no usability validation, and inflated willingness to pay.`},
+        {text:`Run 20 usability tests across both weeks — 10 per week. Test the full flow: discovering Magic Resize, using it, and hitting the paywall. Track task completion rate, time on task, and whether users express intent to upgrade.`, score:2, feedback:`Strong usability validation but weak demand validation. 20 usability tests is overkill — you'll find diminishing returns after 8-10 users. More importantly, "expressing intent to upgrade" in a test session is very different from actually clicking "Upgrade" in a real product context. Usability test participants are polite and encouraging — they'll say "oh I'd definitely pay for this!" to be nice. You need a real behavioural signal (fake-door, beta conversion) to validate willingness to pay, not verbal intent in a lab setting.`},
+        {text:`Skip the formal research. Launch Magic Resize as a 14-day free trial for all users. Measure how many users try it, how often they use it, and how many convert to paid after the trial. Real usage data is the best validation.`, score:2, feedback:`This would eventually give you great data, but it skips the opportunity to catch usability problems before launch. If Magic Resize is confusing to use, your trial conversion data will be contaminated — you won't know if people didn't convert because they didn't want the feature or because they couldn't figure it out. Running usability tests first ensures the feature works well, so your trial data cleanly measures demand. That said, a free trial IS a valid validation method — just not sufficient on its own without usability testing first.`}
+      ],
+      competency:[0,2,6]
+    },
+    {
+      scenario:`2016 — The Enterprise Dilemma: Should Canva Build for Teams?\n\nCanva has 10 million monthly active users, mostly individuals. Enterprise customers (marketing teams, agencies) have started requesting team features: shared brand kits, approval workflows, team templates, and admin controls.\n\nBut building for enterprise is a massive investment. Your product team interviews 25 marketing managers from companies that use Canva:\n• 20 of 25 say they'd pay for team features\n• 15 of 25 already have 3+ team members using individual Canva accounts\n• But when asked to rank features, no two managers agree on the most important one\n• Average willingness to pay: $30/user/month (current Pro is $13/month)\n\nThe CEO asks you: should we build Canva for Teams?`,
+      question:`How do you interpret this research and advise the CEO?`,
+      options:[
+        {text:`The signal is strong on demand but noisy on specifics. Recommend: validate with a concierge MVP — manually provide "team features" to 5 companies for 60 days. See which features they actually use, not just what they say they want. Then build based on observed behaviour.`, score:3, feedback:`This is expert-level validation thinking. You've correctly identified that 20 of 25 saying they'd pay is strong directional signal (demand exists), but no consensus on features means you don't yet know WHAT to build. The concierge MVP solves this perfectly: give 5 companies white-glove team support (manually manage their brand kits, manually route approvals, manually share templates) and observe which "features" they actually use and value. This costs far less than building, and reveals the true priority through behaviour, not stated preferences. This is the Lean Startup approach applied correctly.`},
+        {text:`20 of 25 want it and 15 already have multiple accounts — that's strong validation. Build the full Canva for Teams suite: brand kits, approval workflows, team templates, and admin controls. The total addressable market is massive. Move fast.`, score:1, feedback:`You're reading the signal correctly (demand exists) but making the classic leap: from "people want something" to "build everything." The research shows no consensus on feature priority — building all four features simultaneously is a massive investment with no evidence for which one matters most. What if 80% of the value comes from brand kits alone? You'd have spent months building approval workflows nobody uses. The stated willingness to pay ($30/user) is also likely inflated. Validate before you invest.`},
+        {text:`The lack of consensus on features is a red flag. Run a conjoint analysis survey with 500 potential enterprise users to statistically determine feature priority. Don't build anything until we have quantitative proof of which features matter most.`, score:2, feedback:`Conjoint analysis is a sophisticated technique, but it's premature here. You're trying to use a quantitative method to answer a question that's still exploratory. Enterprise users often can't articulate what they need in a survey because they haven't experienced the alternative. A conjoint study tells you what people say they'd prefer, not what they'd actually use. The lack of consensus isn't a red flag — it means different teams have different needs, which is normal in enterprise. What you need is behavioural data from real usage, not more sophisticated survey methods.`},
+        {text:`Promising, but 25 interviews isn't enough. The enterprise market is too risky to enter without more research. Run 100 more interviews across different industries and company sizes before making any product decisions.`, score:1, feedback:`This is analysis paralysis. 25 interviews with consistent demand signal (80% willing to pay, 60% already have multiple accounts) is more than enough qualitative evidence that enterprise demand exists. More interviews will tell you the same thing with slightly more nuance but no fundamental new insight. The question isn't "does demand exist?" (it clearly does) — it's "what exactly should we build?" And that question is better answered through behavioural experiments (prototypes, MVPs) than more interviews.`}
+      ],
+      competency:[4,5,9]
+    },
+    {
+      scenario:`2017 — Testing Canva's Photo Editing AI\n\nCanva is developing AI-powered photo editing features: background removal, photo enhancement, and style transfer. The team has built working prototypes of all three.\n\nYou run usability tests with 10 users across all three features:\n\nBackground Removal:\n• 10/10 users understood the feature instantly\n• 8/10 completed the task successfully\n• Average time: 12 seconds\n• Net Promoter Score: 78\n\nPhoto Enhancement:\n• 7/10 users understood what "enhance" meant\n• 9/10 completed the task (once they found it)\n• Average time: 8 seconds\n• NPS: 45 (users felt the enhancement was "too subtle")\n\nStyle Transfer:\n• 3/10 users understood the feature\n• 4/10 completed the task\n• Average time: 2 minutes 30 seconds\n• NPS: 62 (users who got it loved it)`,
+      question:`How do you interpret these results and recommend next steps?`,
+      options:[
+        {text:`Launch background removal immediately — it has the best scores across all dimensions. Hold photo enhancement for improvement (NPS too low). Kill style transfer — comprehension is too low for Canva's "easy for everyone" positioning.`, score:2, feedback:`You're right to launch background removal (clear winner) and hold photo enhancement (value isn't landing). But killing style transfer based on usability test results alone misses an important nuance: the low comprehension (3/10) might be a naming/UI problem, not a feature problem. The NPS of 62 from users who understood it suggests the feature has value — it's just not discoverable or understandable. Before killing it, test whether better naming, a visual preview, or a different entry point improves comprehension. Don't confuse a UX problem with a product problem.`},
+        {text:`Launch background removal now. For photo enhancement, increase the intensity of the AI effect and re-test — "too subtle" is a tunable parameter, not a fundamental problem. For style transfer, redesign the UI with visual previews and clearer naming, then re-test with 5 users.`, score:3, feedback:`Excellent interpretation that separates fixable problems from fundamental ones. Background removal is ready (high comprehension + high completion + high NPS = ship it). Photo enhancement has a tuning problem, not a concept problem — "too subtle" means the AI works but needs to be more aggressive. That's a simple parameter adjustment. Style transfer has a comprehension problem — the feature works (NPS 62 from those who got it) but the UI doesn't explain it. Visual previews showing "before → after" would solve this. You've correctly diagnosed each issue and proposed the minimum fix for each.`},
+        {text:`Don't launch any of them yet. Run a quantitative A/B test with 10,000 users to measure which feature has the biggest impact on paid conversion. The usability test tells us about usability, not business value.`, score:1, feedback:`You're right that usability tests don't measure business value, but you're wrong to hold a clearly-ready feature (background removal) for a business validation test. Background removal has perfect comprehension, near-perfect completion, and an NPS of 78 — it's ready to ship. Holding it while you set up an A/B test delays value delivery for no reason. Ship the ready feature now, improve the other two, and use the live background removal data to measure business impact in production. You don't need an A/B test to know that a feature with 78 NPS will be popular.`},
+        {text:`All three features should go through another round of 10-user usability tests after we make improvements. We need consistency in testing methodology — retest background removal too to confirm the results are reliable.`, score:1, feedback:`Retesting background removal is wasteful — the results are clear and consistent across all metrics. This is a common trap: over-testing to feel more confident rather than acting on clear results. The first test with 10 users gave you definitive results for background removal. Retesting wastes a week and delays a launch that will delight users. Your time and research budget are better spent improving the two features that actually need work (enhancement and style transfer) rather than re-confirming what you already know.`}
+      ],
+      competency:[1,5,7]
+    },
+    {
+      scenario:`2018 — The Template Paradox: Users Want More But Use Less\n\nCanva has 50,000+ templates. Your analytics team reports a paradox:\n• Users who browse templates spend 3x longer in the editor\n• But template usage is declining — 45% of designs now start from a blank canvas (up from 30% a year ago)\n• User satisfaction surveys show 4.2/5 for "template variety" (users say they like templates)\n• But usability tests reveal that users take 4+ minutes to find a relevant template\n• Support tickets about "can't find the right template" are up 200% year-over-year\n\nThe template team wants to invest in creating 50,000 more templates. The search team wants to invest in better template discovery.`,
+      question:`How do you resolve this debate using the research data?`,
+      options:[
+        {text:`Invest in discovery, not volume. The data clearly shows that the problem is findability, not variety. Users rate templates highly (they like them in theory) but can't find relevant ones (4+ minute search time). More templates without better search will make the problem worse. Improve search, categorisation, and recommendation algorithms.`, score:3, feedback:`Perfect data interpretation. You've identified the key pattern: the disconnect between stated satisfaction ("I like the templates" → 4.2/5) and behaviour (declining usage, 4+ minute search times, 200% increase in support tickets). This is a textbook case of the stated vs. revealed preference gap. Users say they want more templates because that sounds right, but their behaviour says they can't find the ones that already exist. Adding 50,000 more templates to a broken discovery system is like stocking more books in a library with no catalogue. Fix the catalogue first. Template search, smart categorisation, and AI-powered recommendations are the right investment.`},
+        {text:`Do both. Create 50,000 more templates AND improve search. More templates serve power users who want variety, better search serves casual users who want ease. These aren't competing investments.`, score:1, feedback:`This sounds reasonable but ignores resource constraints and the data. If you add 50,000 templates to a discovery system that's already failing, you make discovery HARDER (more options = more confusion = longer search times). The Paradox of Choice research shows that more options reduce satisfaction and increase decision fatigue. Fix discovery first, then measure whether users actually need more templates or just need to find existing ones. "Do both" is often a way to avoid making a decision — and avoiding decisions is the opposite of product leadership.`},
+        {text:`Run an A/B test: Group A gets 50,000 more templates with current search. Group B gets current templates with improved search. Measure which group creates more designs and has higher retention. Let the data decide.`, score:2, feedback:`Good instinct to test, but the experiment design has a flaw: building 50,000 more templates and a new search system just for an A/B test is a massive investment in both directions before you have evidence for either. The existing data already tells you the answer: search is broken (4+ minute discovery time, 200% support ticket increase). You don't need an A/B test to validate that fixing search will help. A cheaper approach: improve search first (lower investment), measure the impact on template usage, and then decide if more templates are needed. Use existing data before designing new experiments.`},
+        {text:`Survey 5,000 users asking whether they want more templates or better search. Include mockups of improved search to make the choice concrete. User preference should drive this investment decision.`, score:1, feedback:`Never ask users to choose between options they can't properly evaluate. Users can't predict whether better search will solve their template problem — they've never experienced it. They CAN tell you "I want more templates" because that's concrete and intuitive. So the survey will overwhelmingly favour more templates, even though the behavioural data says search is the real problem. This is the asking vs. observing trap. The data you already have (declining usage + high search time + rising support tickets) tells a clearer story than any survey will.`}
+      ],
+      competency:[5,7,0]
+    },
+    {
+      scenario:`2019 — Canva's International Expansion: Should We Localise or Translate?\n\nCanva is launching in Japan. The team debates between two approaches:\n\nApproach A — Translation: Translate the entire UI and template library into Japanese. Same product, different language. Cost: $200K, 2 months.\n\nApproach B — Localisation: Translate + redesign templates for Japanese aesthetics (different colour palettes, typography, layout conventions), add Japanese-specific use cases (nengajo greeting cards, hanko stamps, Japanese resume formats), and adjust the UI for Japanese reading patterns. Cost: $800K, 6 months.\n\nYou have 1 month and $50K for research to inform this decision.`,
+      question:`How do you structure the research to decide between translation and localisation?`,
+      options:[
+        {text:`Run usability tests in Japan with 10 Japanese users using the translated (Approach A) prototype. Measure task completion and satisfaction. If scores are above 80%, translation is sufficient. If below, invest in localisation.`, score:2, feedback:`Reasonable but incomplete. Usability tests measure whether people CAN use the product, not whether they WILL use it. A Japanese user might complete tasks in a translated Canva (high task completion) but still feel the product "isn't for them" because the templates, design conventions, and use cases don't match their needs. Usability testing alone misses the cultural fit dimension. You need to combine usability testing with contextual research that reveals how Japanese users actually create designs, what their specific use cases are, and whether Western templates feel foreign or fine.`},
+        {text:`Three-phase research in Japan: Phase 1 (week 1-2): Contextual interviews with 10 Japanese users — observe how they create designs today, what tools they use, what their specific needs are. Phase 2 (week 3): Test translated prototype with 5 users AND test localised mockups with 5 users. Phase 3 (week 4): Analyse whether the gaps between translation and localisation are deal-breakers or nice-to-haves.`, score:3, feedback:`This is the gold standard for international validation research. Phase 1 (contextual interviews) reveals needs you don't know about — like nengajo cards, Japanese resume formats, or specific aesthetic preferences. Without this phase, you're guessing what "localisation" even means for Japan. Phase 2 (comparative testing) gives you direct evidence of whether translation-only creates friction. Phase 3 (gap analysis) turns the findings into a clear recommendation with cost-benefit analysis. You'll know exactly which localisation elements matter (and which don't), so you can invest surgically rather than doing full localisation or nothing.`},
+        {text:`Analyse Canva's existing usage data from Japanese users (those using the English version). Look at which templates they use, what they create, session length vs. US users, and drop-off points. If Japanese users have similar behaviour to US users, translation is sufficient.`, score:2, feedback:`Smart to start with existing data, but the sample is heavily biased: Japanese users currently using English Canva are by definition comfortable with English and Western design conventions. They are NOT representative of the broader Japanese market you're trying to reach. The users who would benefit most from localisation are precisely the ones who aren't using Canva yet because it doesn't feel right for them. Existing analytics reveal how bilingual Japanese users behave, not how the Japanese market will respond. You need primary research with the target audience.`},
+        {text:`Skip the research and launch with translation first (Approach A). If Japanese user growth is below targets after 3 months, invest in localisation (Approach B). This is faster and cheaper than research, and the market will tell us the answer.`, score:1, feedback:`This "launch and learn" approach has a fatal flaw: you can't distinguish between "translation was insufficient" and "we didn't market well" or "the market timing was wrong" from growth data alone. If growth is slow, was it because Japanese users didn't like the Western templates? Or because they didn't know about Canva? Or because the competitor (LINE tools) was too entrenched? Without research, you're flying blind and may invest $800K in localisation when the real problem was distribution. The $50K research investment helps you make the right $200K-$800K decision.`}
+      ],
+      competency:[0,4,9]
+    },
+    {
+      scenario:`2020 — COVID Creates a Surge: Validating Canva for Education\n\nCOVID-19 has forced schools online. Canva's usage by teachers triples in 2 months — they're creating worksheets, presentations, and virtual classroom materials. Teachers are hacking Canva to work for education: creating "worksheet templates" from social media post templates, using presentation mode for virtual classes.\n\nThe product team sees an opportunity: Canva for Education (free for all K-12 teachers). But should you build dedicated education features or just market the existing product to teachers?`,
+      question:`How do you validate the education opportunity quickly during COVID?`,
+      options:[
+        {text:`Run rapid remote usability tests with 8 teachers using Canva for their actual classroom tasks. Observe what they hack, where they struggle, and what's missing. Simultaneously, run a fake-door test: add "Canva for Education" to the product selector and measure click-through. Make a go/no-go decision in 2 weeks.`, score:3, feedback:`Perfect rapid validation approach for a time-sensitive opportunity. The usability tests reveal WHAT needs building (specific education gaps, pain points, hack patterns). The fake-door test reveals HOW MUCH demand exists (real behavioural signal, not stated interest). Two weeks is fast enough to capitalise on the COVID moment. Observing teacher hacks is particularly valuable — when users bend your product to fit their needs, the bending points show you exactly what to build. If 6 of 8 teachers create the same workaround, that's your first feature.`},
+        {text:`Survey 10,000 teachers who signed up during COVID. Ask them what education features they need, how often they use Canva, and whether they'd recommend it to other teachers. Use the survey results to create a product roadmap.`, score:1, feedback:`A 10,000-person survey takes 3-4 weeks to design, distribute, and analyse — too slow for a COVID opportunity that's happening right now. More importantly, teachers can't tell you what features they need because they haven't seen the alternative. They'll request "more templates" (the obvious answer) when the real opportunity might be "classroom assignment workflow" or "student collaboration tools" — things they can't imagine because they've never experienced them. Survey data will give you a list of obvious requests, not the breakthrough insight that makes Canva for Education truly compelling.`},
+        {text:`Build Canva for Education immediately based on what we can see in the usage data. Teachers are already using Canva for education — we don't need research to validate demand. Speed matters more than research right now. Ship in 4 weeks.`, score:2, feedback:`You're right that demand is validated (usage data proves teachers want this) and speed matters during COVID. But building without research means guessing which features matter most. Usage data shows what teachers DO in Canva but not what they WISH they could do. You might spend 4 weeks building "worksheet templates" when teachers actually need "student submission workflow." Two weeks of rapid research (8 usability tests + a fake-door test) adds 2 weeks to the timeline but dramatically increases the chance you build the RIGHT thing. The opportunity cost of building the wrong education features is higher than 2 weeks of research.`},
+        {text:`Partner with 3 schools for a 6-month pilot program. Give them free Canva Pro access and embed a researcher in each school to observe how teachers use the product over time. Use the longitudinal data to design the perfect education product.`, score:1, feedback:`A 6-month pilot is appropriate for a stable market opportunity, but COVID is a time-limited window. By the time your pilot finishes, schools may be back in person, competitors may have launched education tools, and the teacher behaviour you observe will be post-COVID (different from the current surge). The COVID moment demands rapid validation: learn in weeks, not months. A 6-month pilot also only gives you 3 data points (schools), which isn't enough to generalise even qualitatively. Speed and breadth both argue against this approach.`}
+      ],
+      competency:[0,6,9]
+    },
+    {
+      scenario:`2020 — Testing Canva's Content Planner Feature\n\nCanva is building a Social Media Content Planner — users can schedule their Canva designs to post directly to Instagram, Facebook, and Twitter. The prototype is ready for testing.\n\nYou run usability tests with 8 social media managers:\n• 7/8 complete the core task (schedule a post) successfully\n• Average time: 3 minutes 15 seconds\n• But during post-test interviews, 6/8 users say: "This is nice, but I already use Hootsuite/Buffer for scheduling. I'd need to move my entire workflow to use this."\n• 4/8 users ask: "Can it schedule posts I didn't create in Canva?"\n• Satisfaction score: 3.5/5\n\nThe engineering team has invested 3 months building this feature.`,
+      question:`How do you interpret these results?`,
+      options:[
+        {text:`The usability is fine (7/8 completion) but the value proposition is weak — users already have scheduling tools and won't switch for Canva-only scheduling. Recommend: pivot the feature to be a "publish/share" button that integrates WITH existing scheduling tools (Hootsuite, Buffer) rather than replacing them.`, score:3, feedback:`Masterful interpretation. You've correctly separated usability (works fine) from product-market fit (doesn't fit into existing workflows). The key insight is in the user quotes: "I'd need to move my entire workflow." That's a switching cost problem, not a usability problem. And "Can it schedule non-Canva posts?" reveals the real need: an all-in-one scheduling tool, which Canva shouldn't try to be. The integration approach (publish to Hootsuite/Buffer from Canva) plays to Canva's strength (design) without competing with established scheduling tools. This preserves the 3 months of engineering work by repurposing it as an export/integration layer.`},
+        {text:`3.5/5 satisfaction is below our 4.0 threshold. The feature needs more polish before launch. Add features that users requested: support for non-Canva content, more platforms, analytics dashboards. Retest when the feature is more complete.`, score:1, feedback:`You're treating a strategy problem as a feature problem. The 3.5/5 satisfaction isn't because the feature is unpolished — it's because users don't want to switch from their existing scheduling tools. Adding more features (non-Canva content, analytics) means building a full Hootsuite competitor, which is a completely different product strategy. You'd be spending 6-12 more months building features to compete with established players who have years of head start. The feedback is telling you "don't compete here" — and you're responding with "let's compete harder." Listen to the users.`},
+        {text:`7/8 task completion is excellent. The satisfaction score and interview feedback are just resistance to change — users always prefer existing tools until they try the new one. Launch the feature and let adoption data tell the real story.`, score:1, feedback:`This is a dangerous dismissal of clear user feedback. Yes, users sometimes resist change and then love new tools. But these are social media managers — professional users with established, optimised workflows. When 6 of 8 professionals say "I'd need to move my entire workflow," that's not resistance to change — that's a rational assessment of switching costs. Launching despite this feedback means low adoption, a feature that clutters the product, and a wasted opportunity to build something users actually want (integration with their existing tools).`},
+        {text:`The research is inconclusive — we tested with power users (social media managers) who already have tools. Test with Canva's core audience: small business owners and individuals who DON'T have scheduling tools. They might love this feature.`, score:2, feedback:`Good thinking about audience segments — you're right that non-professional users might have different needs. Small business owners who don't use Hootsuite might find Canva's scheduler valuable. But this doesn't invalidate the current findings; it reframes the target audience. The risk: if you target only non-professional users, the market is smaller and the feature competes less effectively. The better approach combines this insight with integration: build the scheduler for casual users AND integrate with pro tools for power users. But don't dismiss the professional user feedback — it reveals a fundamental positioning question about who this feature is for.`}
+      ],
+      competency:[7,4,9]
+    },
+    {
+      scenario:`2021 — Canva's Print Products: Testing Physical Meets Digital\n\nCanva has launched print products — business cards, posters, t-shirts, mugs. Users design in Canva and order prints delivered to their door. Early data:\n\n• 12% of users who see the "Print" option click on it (high interest)\n• But only 2% of clickers complete a purchase (low conversion)\n• Cart abandonment happens primarily at two points:\n  - 40% drop off at the "paper/material preview" step\n  - 35% drop off at the shipping cost reveal\n\nThe team debates: is this a pricing problem or a UX problem?`,
+      question:`How do you diagnose the conversion problem?`,
+      options:[
+        {text:`Run moderated usability tests with 8 users who have previously abandoned the print flow. Screen-share as they walk through the flow again, thinking aloud at each step. Understand WHY they drop off at the preview step and the shipping reveal, not just WHERE.`, score:3, feedback:`This is the right approach — you already know WHERE the problem is (analytics told you), now you need to know WHY (only qualitative research can tell you). Recruiting users who previously abandoned is crucial — they've experienced the actual friction, not a hypothetical version of it. Think-aloud protocol at the preview step will reveal: do users not trust the print quality? Is the preview confusing? Do they not understand material options? At the shipping reveal: is the price too high? Was it unexpected? Would they pay if shown earlier? The WHY determines the fix: a UX problem needs a design solution, a pricing problem needs a strategy solution.`},
+        {text:`Run an A/B test: Group A sees the current flow. Group B sees shipping costs upfront on the product page (before entering the flow). If Group B has higher overall conversion despite lower initial clicks, it's a pricing transparency problem. If no difference, it's a UX problem.`, score:2, feedback:`This is a well-designed experiment for the shipping cost question, but it only addresses one of the two drop-off points. It also assumes the shipping problem is about transparency (when to show the price) rather than about the actual price level. What if users are fine with the price but the shipping reveal creates sticker shock because they expected free shipping? The A/B test won't tell you that nuance. And it completely ignores the 40% who drop off at the preview step. A/B tests are great for optimising known solutions, but you first need qualitative research to understand the problem space.`},
+        {text:`It's clearly a pricing problem. 35% dropping at shipping cost reveal + 40% at preview step (where they probably see the total cost) = people think it's too expensive. Test 3 price points in an A/B test: current price, 20% lower, and free shipping with higher base price.`, score:1, feedback:`You're jumping to a solution without understanding the problem. The preview step drop-off (40%) happens BEFORE any pricing — it's a material/quality preview, not a cost reveal. If 40% leave at the preview step, the problem might be: confusing material options, lack of trust in print quality, or poor visual preview. Assuming both drop-off points are about pricing leads you to discount when the real fix might be a better preview experience. Always diagnose before prescribing — especially when the data shows TWO different friction points at TWO different stages of the flow.`},
+        {text:`Analyse the data more deeply first. Segment by product type (business cards vs. posters vs. mugs), user type (new vs. returning), and geography. The aggregated 2% conversion rate might hide segments with 10% conversion and segments with 0%. Find the segments that work and double down.`, score:2, feedback:`Good analytical instinct — segmentation often reveals that an aggregate problem is actually a segment-specific problem. If business cards convert at 8% but mugs convert at 0.5%, you have very different strategies for each. However, this analysis alone won't tell you WHY users drop off. Even after segmentation, you need qualitative research to understand the friction at each step. The best approach combines segmentation (to focus your research on the biggest opportunities) with usability testing (to understand the qualitative WHY behind the quantitative WHERE).`}
+      ],
+      competency:[1,5,6]
+    },
+    {
+      scenario:`2022 — Testing Canva's AI Text-to-Image Generator\n\nCanva is about to launch "Magic Media" — an AI tool that generates images from text prompts (similar to DALL-E). The team needs to decide the testing approach.\n\nComplexity: unlike traditional features where there's a "right" output, AI-generated images are subjective. A usability test measuring "task completion" doesn't work because there's no single correct output. Users might complete the task but hate the result, or fail to get what they imagined but love what the AI produced instead.\n\nThe design team proposes testing with 50 users and rating satisfaction on a 1-5 scale. The AI team proposes measuring "prompt-to-design adoption" (how often a generated image is actually used in a design).`,
+      question:`How do you design the user testing for this AI feature?`,
+      options:[
+        {text:`Combine both approaches but restructure. Phase 1: 8-user qualitative study — give users creative briefs ("make a birthday invitation"), observe their prompting behaviour, capture their reactions, and interview them about the experience. Phase 2: Beta launch to 5,000 users measuring prompt-to-design adoption rate AND prompt refinement patterns (how many times users re-prompt before accepting or abandoning).`, score:3, feedback:`This is the ideal approach for validating AI features. Phase 1 (qualitative) reveals things metrics can't: Do users understand how to write prompts? What's their emotional reaction to AI-generated images? Do they feel creative or frustrated? What mental model do they have of the AI? Phase 2 (behavioural) measures what matters at scale: adoption rate tells you if people find the outputs useful, and prompt refinement patterns reveal the learning curve (1 prompt → great! 5 prompts → tolerable. 10 prompts → they'll leave). Together, you understand both the experience quality and the business impact.`},
+        {text:`Skip traditional usability testing entirely. AI features need AI-specific metrics. Launch to 100,000 users and measure: (1) adoption rate, (2) generation-to-usage ratio, (3) prompt retry rate, (4) NPS via in-product survey. These metrics tell you everything about whether the feature works.`, score:1, feedback:`These are the right METRICS but the wrong SEQUENCE. Launching to 100,000 users without qualitative testing means you won't understand WHY the metrics are what they are. If the adoption rate is 15%, is that good or bad? If the retry rate is 3 prompts per session, is that users exploring creatively or struggling with bad outputs? Without qualitative context, you're measuring but not understanding. And if there's a fundamental UX problem (confusing prompt interface, misleading expectations), you've now given 100,000 users a bad first impression of a feature you could have fixed with 8 usability tests first.`},
+        {text:`Run A/B tests with different AI models and different UI presentations. Test: (1) single-generation vs. multi-generation (showing 4 options), (2) guided prompts vs. free-form, (3) low-quality-fast vs. high-quality-slow. Optimise each variable independently.`, score:2, feedback:`These are excellent optimisation experiments, but they're premature. A/B tests assume you know the basic experience works and you're optimising parameters. You haven't yet validated the fundamental questions: Can users write effective prompts? Do they understand what AI can and can't do? Is the output quality acceptable? You might A/B test single vs. multi-generation and find multi-generation wins — but miss that users have no idea how to write a good prompt in the first place. Optimise after you've validated the core experience with qualitative testing.`},
+        {text:`Design a structured usability test with 50 users: give each user 5 specific creative tasks, rate each output 1-5, measure time per task, and calculate a composite "AI quality score." This gives us a statistically valid quality baseline before launch.`, score:1, feedback:`This treats AI art like a traditional feature with "correct" outputs. A 1-5 rating for AI-generated images is nearly meaningless: what does a "3" mean? The same image might be a "5" for a birthday invitation and a "2" for a business presentation. Structured ratings can't capture the subjective, contextual nature of creative AI outputs. And 50 users doing 5 predefined tasks won't reveal how people actually use AI in their own creative process — they'll be performing your tasks, not their own. You need to observe natural creative behaviour, not measure structured responses.`}
+      ],
+      competency:[6,0,2]
+    }
+  ],
+  2: [
+    {
+      scenario:`2014 — Canva's Onboarding: How Much Hand-Holding Is Too Much?\n\nCanva is redesigning its onboarding flow. The current flow has 7 steps that walk new users through every feature (templates, text, images, elements, upload, share, download). Analytics show:\n• 60% of users complete all 7 onboarding steps\n• But D7 retention is only 25% — below the 35% target\n• Users who skip onboarding (close the tutorial) have 30% D7 retention\n• Users who complete onboarding but don't create a design in session 1 have only 10% D7 retention\n\nThe team debates: should we add more onboarding steps to teach users better, or remove onboarding entirely?`,
+      question:`What does the data tell you, and what should you test?`,
+      options:[
+        {text:`The data shows onboarding is hurting retention — skip-users retain better (30% vs 25%). But correlation isn't causation: skip-users might be more motivated. The key insight is the 10% retention for users who complete onboarding but don't create. Test a new flow: skip the tutorial and instead guide users to create their first design immediately (template selection → customisation → download).`, score:3, feedback:`Expert-level data interpretation. You've identified three critical insights: (1) The skip-user paradox likely reflects motivation bias, not onboarding quality. (2) The real retention driver is "creating a design in session 1" — not completing a tutorial. (3) The current onboarding teaches features instead of driving to the activation moment. Your proposed test — guiding users to create immediately rather than teaching them about features — is the right approach. This is the "time to value" principle: users don't retain because they understand features; they retain because they experienced value. A design completed in session 1 IS the activation event.`},
+        {text:`Add more onboarding steps to make the tutorial more engaging. The 40% who don't complete are dropping off because the tutorial is boring. Make it interactive — let users try each feature during the tutorial instead of just reading about it.`, score:1, feedback:`You're optimising the wrong thing. The problem isn't that the tutorial is boring — it's that the tutorial exists instead of the actual product experience. Making the tutorial more interactive means users spend more time in the tutorial and less time creating, which is the opposite of what drives retention. The data clearly shows that creating a design is what matters, not learning about features. An interactive tutorial is still a tutorial — it delays the moment of value creation. The best onboarding IS the product, not a guide to the product.`},
+        {text:`Remove onboarding entirely and let users explore freely. The data shows skip-users have higher retention (30% vs 25%), proving that self-directed exploration is better than guided onboarding.`, score:1, feedback:`You've made the correlation-causation error you should have flagged. Skip-users probably have higher retention because they're self-motivated early adopters who would retain regardless — not because skipping the tutorial made them more engaged. Removing onboarding entirely abandons the 60%+ of users who need guidance. The solution isn't "no guidance" — it's "better guidance." Guide users to their first creation (the activation moment) rather than teaching them every feature. The best onboarding feels like using the product, not like a tutorial.`},
+        {text:`Run 3 parallel A/B tests: (A) current 7-step onboarding, (B) shortened 3-step onboarding, (C) no onboarding. Measure D7 retention for each. The data will tell us the optimal onboarding length.`, score:2, feedback:`A reasonable experiment, but the variable you're testing (onboarding length) isn't the most important variable. The data suggests that WHAT you do in onboarding matters more than HOW LONG it is. A 3-step tutorial is still a tutorial — it just teaches fewer features. The real hypothesis to test is: does guiding users to create their first design immediately (no tutorial, just "pick a template and make it yours") outperform any tutorial-based onboarding? You'd want to test: (A) current onboarding, (B) no tutorial — go straight to "pick a template," (C) hybrid — minimal guidance embedded in the creation flow.`}
+      ],
+      competency:[6,1,5]
+    },
+    {
+      scenario:`2016 — The Brand Kit Usability Debate\n\nCanva for Teams includes a "Brand Kit" feature — companies upload their logos, colours, and fonts, and these become available in every team member's editor. The product team built two prototypes:\n\nPrototype A — Automatic: Brand Kit elements are automatically applied to templates. When a user picks a template, it's already in their brand colours and fonts. Users can override if they want.\n\nPrototype B — Manual: Brand Kit elements appear in a sidebar panel. Users manually apply brand colours and fonts to any design. Full control, no surprises.\n\nYou test both prototypes with 10 marketing managers (5 per prototype):`,
+      question:`Prototype A: 4/5 complete the task faster, but 3/5 say they felt "out of control" and wanted to choose when to apply brand elements.\nPrototype B: 5/5 complete the task, but it takes 2x longer. All 5 say they "like having control" but 2 say "this feels like extra work."\n\nHow do you interpret these results and what do you recommend?`,
+      options:[
+        {text:`Neither prototype is right as-is. The data reveals a tension between speed (A) and control (B). Recommend a hybrid: start with brand elements auto-applied (like A) but show a prominent "Customise" button that lets users easily override (addressing A's "out of control" feedback). Test the hybrid with 5 new users.`, score:3, feedback:`Excellent synthesis. You've extracted the key insight from each prototype: users WANT the speed of automatic application but NEED the feeling of control. The hybrid approach gives them both: the default is fast (auto-applied), and the override is accessible (prominent customise button). This follows the "smart defaults with easy escape hatches" design principle — the product makes intelligent choices but never traps users. Testing the hybrid with 5 new users closes the loop efficiently. You're building on the learning from both prototypes rather than picking a winner.`},
+        {text:`Go with Prototype B. 5/5 task completion beats 4/5. The "extra work" complaint from 2 users is a minor friction that training can solve. Control is more important than speed for enterprise brand management.`, score:1, feedback:`You're over-indexing on task completion (5/5 vs 4/5 is not statistically meaningful with 5 users) and under-weighting the qualitative finding. "This feels like extra work" from enterprise users is a serious signal — marketing managers create dozens of designs per week. If every design requires manual brand application, the cumulative time cost is significant. And the argument that "training can solve it" contradicts Canva's entire ethos of intuitive, no-training-needed design. If you need to train users, the feature design needs improvement.`},
+        {text:`Go with Prototype A. Speed matters more than feeling in control, especially when brand consistency is the goal. The "out of control" feeling will fade as users get used to the auto-application behaviour.`, score:1, feedback:`Dismissing "out of control" feedback from 3 of 5 users is risky. For enterprise brand managers, control over brand presentation IS the job. If they feel the tool is making decisions they should be making, trust erodes — even if the tool is right 90% of the time. The 10% where auto-application is wrong (wrong template section, wrong colour context) will create frustration that confirms the "out of control" feeling. Users don't get used to feeling out of control — they switch to tools that give them control.`},
+        {text:`The sample is too small to draw conclusions. Run a larger quantitative study with 50 users per prototype. Measure task completion time, error rate, satisfaction score, and intent to purchase. Use statistical tests to determine which prototype is significantly better.`, score:1, feedback:`This misunderstands the purpose of the test. You're not trying to statistically prove which prototype "wins" — you're trying to learn how users interact with brand tools so you can design the best solution. With 5 users per prototype, you've already discovered the key tension (speed vs. control) and can design a better third option. Scaling to 50 users per prototype would confirm the same tension with more confidence but wouldn't help you design a better solution. The insight is in the qualitative findings, not in the statistical significance.`}
+      ],
+      competency:[1,7,2]
+    },
+    {
+      scenario:`2018 — Canva's Accessibility Testing Gap\n\nA designer on the team raises a concern: Canva has never done accessibility testing. The product works well for sighted users with full motor control, but it's unclear whether users with visual impairments, motor disabilities, or cognitive differences can use Canva effectively.\n\nInitial assessment:\n• Screen reader compatibility: untested\n• Keyboard-only navigation: partially works but inconsistent\n• Colour contrast: some text fails WCAG AA standards\n• The drag-and-drop editor is fundamentally mouse-dependent\n\nThe product VP asks: "How bad is this, and how do we fix it without rebuilding the entire editor?"`,
+      question:`How do you scope and structure accessibility research?`,
+      options:[
+        {text:`Three-phase approach: Phase 1 (1 week): Automated accessibility audit (WAVE, axe) to identify all WCAG violations — gives you the full scope of technical issues. Phase 2 (2 weeks): Recruit 6 users with diverse disabilities (2 screen reader users, 2 motor-impaired, 2 low-vision) for moderated usability tests on core tasks. Phase 3: Prioritise fixes by impact — how many users are affected × how severe the barrier is.`, score:3, feedback:`This is the right approach: automated audit for breadth (catches all technical violations), then user testing for depth (reveals real-world impact). The participant diversity is critical — screen reader users, motor-impaired users, and low-vision users face completely different barriers and need different solutions. Phase 3's prioritisation matrix (users affected × severity) prevents the common trap of fixing easy violations while ignoring hard-but-critical ones. This gives the VP a clear answer: "Here's exactly how bad it is, here are the top 5 fixes ranked by impact, and here's the estimated effort for each."`},
+        {text:`Focus exclusively on WCAG compliance. Run an automated audit, fix all AA-level violations, and certify compliance. Accessibility is a legal requirement, not a user research question. We need to meet the standard, not test with users.`, score:1, feedback:`WCAG compliance is necessary but not sufficient. Automated audits catch about 30% of accessibility issues — the rest require human judgment. A screen reader user might technically be able to navigate the page (WCAG pass) but find the experience so confusing they can't accomplish anything (practical fail). Canva's drag-and-drop editor presents interaction challenges that no automated tool can evaluate. Compliance without user testing gives you legal cover but doesn't give users with disabilities a usable product. Accessibility is a UX problem, not just a compliance checkbox.`},
+        {text:`This is too big to research right now. Start by making keyboard navigation work consistently and fixing colour contrast — these are the most common accessibility issues. Once the basics are done, then do user testing to find remaining problems.`, score:2, feedback:`You're right that keyboard navigation and colour contrast are high-impact fixes, and fixing them first is pragmatic. But skipping the research means you're guessing at priorities instead of knowing them. What if screen reader compatibility is actually the bigger barrier? What if your keyboard navigation "fix" creates new problems for motor-impaired users? An accessibility audit (1 week) gives you the full scope before you start fixing, ensuring you work on the most impactful issues first. Fix and test simultaneously — don't sequence them when they can run in parallel.`},
+        {text:`Recruit 20 users with various disabilities for a comprehensive usability study covering every major feature. We need to understand the full scope of accessibility issues before we can plan the fix.`, score:1, feedback:`A 20-person comprehensive study is too ambitious for the first step. Recruiting 20 users with diverse disabilities takes 4-6 weeks alone (accessibility research participants are harder to recruit). Testing "every major feature" with each participant takes hours per session. You'd be 2-3 months into research before you fix a single issue. The VP needs actionable results quickly. Start with a focused study (6 users, core tasks only) plus an automated audit. You'll identify the top barriers in 3 weeks and can start fixing immediately while planning more comprehensive research for phase 2.`}
+      ],
+      competency:[0,1,8]
+    },
+    {
+      scenario:`2019 — The Collaboration Conundrum: Real-Time vs. Async\n\nCanva is building collaboration features. User research reveals two distinct user needs:\n\nReal-time collaboration: Teams working together simultaneously on the same design (like Google Docs). Popular with agencies and fast-moving teams.\n\nAsync collaboration: Commenting, feedback, and approval workflows. Popular with enterprise teams where stakeholders review designs at different times.\n\nEngineering estimates:\n• Real-time: 6 months, high technical complexity\n• Async (comments + approvals): 3 months, moderate complexity\n\nYou've interviewed 20 teams. 12 want real-time, 8 want async.`,
+      question:`How do you validate which to build first?`,
+      options:[
+        {text:`Don't trust the stated preferences. Run a behavioural experiment: give 10 teams access to a basic shared canvas (minimal real-time) and give 10 teams access to a commenting tool (minimal async). After 30 days, measure which group collaborates more frequently. Let behaviour, not stated preference, decide.`, score:3, feedback:`This is the gold standard for validating competing features: test revealed preference, not stated preference. When 12 of 20 teams "want" real-time collaboration, they might be imagining Google Docs and projecting that desire onto Canva. But design collaboration is fundamentally different from document collaboration — you rarely need two people editing the same image simultaneously. The 30-day experiment reveals what teams actually DO, not what they think they want. If the commenting group collaborates 3x more than the shared canvas group, async wins regardless of stated preference. Behaviour doesn't lie.`},
+        {text:`Build async first — it's half the time, serves 8 of 20 teams directly, and the commenting infrastructure (presence, notifications, threading) is foundation for real-time later. Ship async in 3 months, measure adoption, then decide on real-time.`, score:2, feedback:`Pragmatic and defensible. Building async first is lower risk (3 months vs. 6, moderate vs. high complexity) and creates infrastructure you'll need for real-time anyway. The 8 of 20 teams who want async explicitly will use it immediately, giving you adoption data. The risk: the 12 teams who wanted real-time might feel unheard, and you're making a resource allocation decision without testing the assumption that "stated preference = actual need." That said, if you can't run the behavioural experiment, this is the second-best approach.`},
+        {text:`12 of 20 want real-time — that's 60% of respondents. Build real-time first because it serves the majority. The higher engineering investment is justified by the stronger demand signal.`, score:1, feedback:`You're treating interview responses as votes. But "12 of 20 say they want X" doesn't mean 60% will USE X. In stated-preference research, users consistently overvalue novel/exciting features (real-time collaboration sounds cool) and undervalue practical features (commenting is boring but useful). Real-time design collaboration also has a usage pattern problem: how often do two people need to edit the same design simultaneously? For most teams, the answer is "rarely." But commenting on someone else's design? That happens multiple times per design. Stated frequency of need often inverts stated desirability.`},
+        {text:`Build a prototype of each and test them with the same 20 teams from the interviews. A/B test: 10 teams get real-time prototype, 10 get async prototype. Measure collaboration frequency and satisfaction.`, score:2, feedback:`Better than trusting stated preference, but a prototype test has a key limitation: teams can't integrate a prototype into their real workflow. Collaboration is a habit that needs time to develop — a 1-hour prototype test shows whether the feature is usable, not whether it's valuable in daily work. You need longitudinal data (weeks, not hours) to understand collaboration patterns. That said, a prototype test is much better than just trusting interview responses, and if you can't run a longer experiment, this gives you useful signal.`}
+      ],
+      competency:[6,2,9]
+    },
+    {
+      scenario:`2021 — Testing Canva's Free-to-Paid Conversion Flow\n\nCanva's freemium model works well — 5% of free users convert to Canva Pro ($13/month). But the team believes conversion could be higher.\n\nCurrent flow: free users encounter paywalls when they try to use Pro features (premium templates, Magic Resize, Brand Kit). The paywall shows the feature name and price.\n\nThe team has designed 3 new paywall variations:\n• Variation A: Shows a before/after comparison (your design without Pro vs. with Pro)\n• Variation B: Shows social proof ("2 million designers use Canva Pro")\n• Variation C: Offers a 14-day free trial instead of immediate purchase\n\nYou have enough traffic to run a proper A/B test.`,
+      question:`How do you structure the testing strategy?`,
+      options:[
+        {text:`Before A/B testing paywalls, run 8 usability tests observing how free users currently encounter and react to paywalls. Understand the qualitative experience first: do users feel frustrated? Confused? Do they understand what they'd get? Then use those insights to refine the variations before running the A/B test.`, score:3, feedback:`This is the methodologically correct sequence: qualitative first, then quantitative. The current paywall might have fundamental UX problems that all 3 variations share. For example: maybe users feel ambushed by paywalls (emotional problem), or don't understand what "Magic Resize" does (comprehension problem), or don't know the price is per month (clarity problem). Usability tests reveal these issues so you can fix them in ALL variations before testing. Without this step, you might A/B test 3 variations of a fundamentally broken experience and conclude "nothing works" when the real issue was something none of the variations addressed.`},
+        {text:`Run a standard A/B/C/D test (control + 3 variations) with equal traffic split. Primary metric: conversion rate. Secondary metrics: time to conversion, feature engagement post-conversion, 30-day retention of converters. Run for 2 weeks or until statistical significance.`, score:2, feedback:`This is a well-structured A/B test — right metrics, right timeline, right statistical rigour. But it skips the qualitative understanding phase. You're optimising conversion without understanding WHY current conversion is only 5%. What if the biggest barrier isn't the paywall design but the paywall timing (appearing at the wrong moment) or the value proposition (users don't understand what Pro gives them)? You might find that Variation C (free trial) wins, but miss that moving the paywall to a different point in the user journey would have a 3x bigger impact than any paywall design change.`},
+        {text:`Start with Variation C (free trial) only. Free trials are proven to increase conversion across SaaS. A/B test: current paywall vs. 14-day free trial. If the trial wins, then test variations A and B within the trial flow. Sequential testing is more efficient than testing everything at once.`, score:1, feedback:`You're making a premature assumption that free trials will win. Free trials work in some contexts but not others: they work when users need time to discover value, but they can also attract low-intent users who trial and churn (increasing support costs without increasing revenue). Canva's current model — paywalls at the moment of need — has the advantage of capturing users with immediate intent. A free trial might increase conversion count but decrease conversion quality. You need to test, not assume. And testing one variation at a time is slower than testing all three simultaneously (you have the traffic for it).`},
+        {text:`Don't test paywalls at all. Instead, A/B test giving free users more exposure to Pro features (let them use Magic Resize 3 times free, then paywall). The best way to increase conversion isn't a better paywall — it's letting users experience the value.`, score:2, feedback:`Excellent strategic thinking — the best paywall is no paywall. Letting users experience Pro features before asking them to pay is a proven conversion strategy (the "taste before you buy" model). However, this is a different experiment from what was proposed, and it should be tested alongside the paywall variations, not instead of them. You might be right that the upstream experience matters more than the paywall design, but you need data to prove it. Also, this approach has a cannibalization risk: if users can use Pro features 3 times free, some will never convert (they only need Magic Resize occasionally).`}
+      ],
+      competency:[6,0,5]
+    },
+    {
+      scenario:`2022 — Canva's AI Feature Testing: Users Love It But Don't Trust It\n\nCanva launches "Magic Design" — users type a prompt like "wedding invitation, elegant, gold and white" and the AI generates multiple complete designs. Beta testing results:\n\n• 85% of beta users try Magic Design at least once\n• 60% say they're "impressed" or "amazed" by the results\n• But only 25% actually USE an AI-generated design in their final output\n• Post-use survey: "I'm worried the design looks generic" (45%), "I want to add my own touch" (38%), "I'm not sure about copyright" (12%)\n\nThe AI team sees 85% trial as a success. The product team sees 25% usage as a failure.`,
+      question:`How do you resolve this disagreement with research?`,
+      options:[
+        {text:`Both are right — trial is high (feature is compelling) but adoption is low (feature isn't meeting the actual need). Run 8 moderated sessions where users create a real design for a real purpose using Magic Design. Observe: at what point do they abandon the AI design? What do they change? What "own touch" do they add? The gap between trial and usage reveals the product opportunity.`, score:3, feedback:`Brilliant framing: both teams are right, and the gap between trial (85%) and usage (25%) IS the insight. The moderated sessions will reveal the precise moment users lose confidence in the AI output — that's where the product needs improvement. Observing what users change reveals what the AI gets wrong. Observing the "own touch" they add reveals that users want AI as a starting point, not a finished product. This reframes the feature from "AI creates your design" to "AI gives you a head start you can make your own." That positioning change might increase the 25% usage rate dramatically without changing the AI at all.`},
+        {text:`The 25% usage rate is the real metric. Set a target of 50% and run iterative A/B tests improving AI quality, adding more style options, and increasing output variety. Keep testing until AI-generated designs are good enough that users don't need to modify them.`, score:1, feedback:`This misreads the user feedback. "I want to add my own touch" (38%) isn't a quality complaint — it's a creative need. Even if AI generates a "perfect" design, many users will reject it because they want ownership over their creation. Making the AI "better" won't solve a psychological resistance to using someone else's work (even if that "someone" is AI). The fix isn't better AI outputs — it's better AI-human collaboration. Let users guide the AI, customise easily, and feel like the design is theirs. You're trying to replace human creativity when users want AI to augment it.`},
+        {text:`The 45% who say designs "look generic" are the key insight. Improve the AI model to produce more unique, personalised designs. Train it on trending design styles and individual user preferences. When the AI output is truly unique, usage will increase.`, score:2, feedback:`You've identified a real problem (generic-looking output) but proposed only a technical solution. Yes, better AI models help. But "generic" might also mean "not branded" — the design doesn't use my brand colours, my fonts, my style. Integrating Brand Kit data into Magic Design prompts (so the AI generates designs in YOUR brand style) might solve "generic" faster than retraining the model. Also, the "copyright" concern (12%) will grow as AI awareness increases — this needs a proactive communication solution, not just better AI. Technical improvements are necessary but not sufficient.`},
+        {text:`This is an expectations problem, not a product problem. Users try Magic Design with unrealistic expectations (AI will create my perfect design) and are disappointed when it requires editing. Redesign the feature framing: instead of "AI creates your design," position it as "AI gives you a head start." Change the UI to encourage editing, not just accepting.`, score:2, feedback:`Strong insight about expectations management — the framing absolutely matters. "AI creates your design" sets up an expectation of a finished product, while "AI gives you a head start" sets up an expectation of a starting point. This reframing could increase usage without changing the AI at all. However, you're proposing a solution without doing the research to validate it. What if the real barrier isn't expectations but actual quality issues? What if users who DO use the AI designs are perfectly happy, and the non-users have different needs entirely? You need the observational research to confirm your hypothesis before redesigning the framing.`}
+      ],
+      competency:[7,5,4]
+    },
+    {
+      scenario:`2023 — Canva's Docs Feature: Competing with Google Docs\n\nCanva has launched "Canva Docs" — a visual-first document editor. Unlike Google Docs (text-first), Canva Docs lets users create visually rich documents with drag-and-drop design elements.\n\nEarly beta with 500 users shows:\n• 70% create at least one doc (high trial)\n• Average doc has 3 visual elements (images, charts, icons)\n• But D14 retention for docs users is only 15% (vs 40% for core Canva)\n• 65% of created docs are "one-pagers" (proposals, one-sheets, reports)\n• Only 8% of docs are collaborative (shared with others)\n• Exit survey: "I love it for one-pagers but I wouldn't replace Google Docs for everyday documents"`,
+      question:`How do you use this data to refine the product strategy?`,
+      options:[
+        {text:`The data shows product-market fit for a niche: visual one-pagers. Don't try to compete with Google Docs for everyday documents. Instead, own the one-pager category. Run usability tests with 8 users who created one-pagers to understand: what triggers them to create a one-pager? What's their current workflow (PowerPoint? PDF? Word?)? What would make Canva Docs their default tool for this specific use case?`, score:3, feedback:`This is strategic research thinking at its best. The data clearly shows: high trial + low retention + concentrated use case (one-pagers) = niche product-market fit, not broad product-market fit. Instead of trying to force broad adoption, you're doubling down on where the product actually works. The usability tests with one-pager creators will reveal the competitive landscape (what tool are they replacing?) and the remaining friction (what would make them come back?). Owning "visual one-pagers" is a defensible niche that plays to Canva's strengths, while competing with Google Docs for everyday documents is a losing battle.`},
+        {text:`15% D14 retention is too low. The product needs fundamental improvements before we invest more. Run a comprehensive usability study with 20 users across different doc types (proposals, meeting notes, reports, wikis) to find all the friction points. Fix the top issues and relaunch.`, score:1, feedback:`You're treating the low retention as a usability problem when it's a positioning problem. The 65% one-pager concentration and the exit survey ("wouldn't replace Google Docs") tell you that users understand Canva Docs and can use it — they just don't need it for everyday documents. No amount of usability fixes will make users abandon Google Docs for meeting notes and wikis. Testing across all doc types wastes resources on use cases where Canva Docs has no natural advantage. Focus on the use case where it clearly works (visual one-pagers) and make that experience exceptional.`},
+        {text:`The collaboration number (8%) is concerning. Collaboration is what makes Google Docs sticky. Add real-time collaboration, commenting, and sharing features, then re-measure retention. Without collaboration, docs is a single-player tool that can't compete.`, score:1, feedback:`You're trying to copy Google Docs' success formula when the data says Canva Docs succeeds differently. Google Docs is sticky because of collaboration; Canva Docs could be sticky because of visual quality. The 8% collaboration rate isn't low because collaboration is broken — it's low because visual one-pagers are typically created by one person and shared as finished outputs (PDFs), not collaboratively edited. Adding collaboration features might slightly increase the 8% but won't change the fundamental use pattern. Build for how users actually use the product, not how Google's product works.`},
+        {text:`Expand the beta to 5,000 users and wait 60 days. 500 users over 14 days isn't enough data. Retention might improve as users discover more use cases. We need more data before making strategic decisions.`, score:1, feedback:`More data won't change the core insight. The pattern is already clear: one-pager concentration + low retention + clear user feedback. 5,000 users will show the same pattern with smaller confidence intervals. The exit survey quote ("wouldn't replace Google Docs") is qualitative gold — it tells you the positioning truth that no amount of quantitative data will add to. Waiting 60 days delays strategic decisions by 2 months for marginal improvement in data quality. Act on the strong signal you already have.`}
+      ],
+      competency:[9,7,5]
+    },
+    {
+      scenario:`2023 — Testing Canva's AI-Powered Brand Voice Feature\n\nCanva is developing "Brand Voice" — an AI feature that learns a company's writing style and generates on-brand copy (social media captions, headlines, body text). The feature analyses a company's existing content and creates a "voice profile."\n\nPilot with 15 enterprise companies:\n• 13/15 companies successfully create a voice profile\n• AI-generated copy quality ratings:\n  - Social media captions: 4.1/5\n  - Headlines: 3.8/5\n  - Body text (long-form): 2.3/5\n  - Email subject lines: 4.3/5\n• 10/15 companies say they'd use it for social media and emails\n• 3/15 say they'd trust it for any written content\n• 2/15 say "it sounds like us, but a slightly off version of us"`,
+      question:`What's your research-informed recommendation?`,
+      options:[
+        {text:`Launch for short-form only: social media captions and email subject lines (both rated 4.0+). Explicitly exclude long-form body text (2.3/5 is below acceptable quality). Position Brand Voice as a "short-form copy assistant" not a "content writer." Run usability tests with 5 companies to refine the short-form experience before full launch.`, score:3, feedback:`Perfect scoping based on data. The ratings clearly show that AI handles short-form content well (4.1-4.3) but struggles with long-form (2.3). Launching the strong use case while excluding the weak one protects brand trust — if companies use Brand Voice for body text and get bad results, they'll lose trust in the entire feature (including the parts that work). The "short-form copy assistant" positioning sets correct expectations. The 5-company usability test before launch ensures the short-form experience is polished. You're launching what works, excluding what doesn't, and setting up for expansion as the AI improves.`},
+        {text:`The 2.3/5 for body text is a training data problem. Collect more long-form content from pilot companies, retrain the model, and retest. Don't launch anything until all content types are rated above 3.5/5. A partially-good feature damages trust more than no feature at all.`, score:1, feedback:`Waiting for perfection across all content types delays a feature that already works well for short-form. The 4.1-4.3 ratings for social media and email subject lines represent clear value that companies want now. Delaying launch to fix body text means 10 of 15 pilot companies who would use it for social media and emails get nothing. A partially-good feature damages trust only if users encounter the bad parts. If you launch short-form only and clearly exclude long-form, users experience only the good parts. Ship the value you have; improve the rest in parallel.`},
+        {text:`The real insight is the "slightly off version of us" feedback from 2 companies. This suggests a fundamental AI limitation: style mimicry is never perfect. Invest in researching what makes copy feel "authentic" vs. "off" before building further. The quality gap might not be closeable with more training.`, score:2, feedback:`This is a deep and potentially important insight — there may be an uncanny valley for brand voice where "almost right" feels worse than "clearly different." But 2 of 15 companies isn't a strong enough signal to halt the feature. The 10 of 15 who'd use it for social media and emails didn't mention the "slightly off" problem for short-form content. Research into what makes copy feel authentic is valuable for the long-form improvement roadmap, but it shouldn't delay launching the short-form feature that 10 companies want and rated 4.0+.`},
+        {text:`Launch the full feature (all content types) with quality labels: mark AI-generated content as "Draft — review before publishing." This manages expectations and lets users decide what's good enough for their standards. The 4.3/5 content will be used as-is; the 2.3/5 content will be treated as a starting point.`, score:2, feedback:`Creative solution that respects user agency. "Draft — review before publishing" is a reasonable UX pattern. However, the risk is that users will try body text, see poor quality (2.3/5), and lose confidence in ALL AI-generated content — including the good stuff. The halo effect works in reverse: one bad experience colours perception of everything. A "draft" label might not prevent this negative transfer. It's safer to not expose users to the weak content type at all until it's improved, rather than relying on a label to set expectations.`}
+      ],
+      competency:[9,7,8]
+    },
+    {
+      scenario:`2024 — The Canva Redesign Backlash: Users Hate the New Editor\n\nCanva has rolled out a major editor redesign to 10% of users. The new editor has a cleaner UI, consolidated toolbars, and an AI-powered "smart sidebar" that surfaces tools based on context.\n\nResults after 2 weeks:\n• NPS drops from 62 to 41 among redesign users\n• Support tickets increase 300%\n• Social media: viral complaint threads with thousands of likes\n• But: task completion time is actually 15% FASTER in the new editor\n• And: new users (those who joined after the redesign) rate it 4.2/5\n\nThe CEO is alarmed by the NPS drop and wants to roll back.`,
+      question:`How do you advise the CEO using research principles?`,
+      options:[
+        {text:`Don't roll back yet. The data shows a classic "change aversion" pattern: existing users hate any change (NPS drops, complaints), but objective metrics are better (15% faster) and new users love it (4.2/5). Recommend: run moderated sessions with 8 vocal critics to understand specific pain points vs. general change aversion. Fix genuine usability regressions. Keep the redesign but address legitimate issues.`, score:3, feedback:`Expert handling of the most common product testing scenario: redesign backlash. You've correctly identified the pattern: emotional resistance (NPS drop, social media outrage) vs. objective improvement (faster task completion, new user approval). The key distinction is between "I don't like that it's different" (change aversion, temporary) and "I can't find the tool I use every day" (usability regression, permanent). The 8-user sessions with vocal critics will separate these. Fix the regressions (muscle memory disruptions, moved tools), keep the improvements. Most redesign complaints fade after 2-4 weeks as users rebuild muscle memory — but genuine regressions don't fade and must be fixed.`},
+        {text:`Roll back immediately. NPS dropped 21 points and support tickets are up 300%. These are real users expressing real pain. Objective metrics like task completion time don't matter if users are unhappy. Ship again only when the redesign tests well with existing users.`, score:1, feedback:`Rolling back has its own costs: users who've spent 2 weeks learning the new UI now have to re-learn the old one (more disruption). And "tests well with existing users" is an impossible bar — existing users will ALWAYS prefer the familiar interface in testing. You'd never ship a redesign. The 300% support ticket increase and NPS drop are expected outcomes of any significant UI change. What matters is whether the complaints are about the change itself (temporary) or about real problems (permanent). You need research to distinguish between the two before making a rollback decision.`},
+        {text:`Expand the rollout to 50% of users. The faster task completion and positive new-user ratings prove the redesign is objectively better. The complaints will fade as users get used to it. A larger sample will give us more reliable data.`, score:1, feedback:`Expanding rollout while NPS is 21 points lower is reckless. Yes, the complaints might fade — but they also might be masking genuine usability regressions that a 10% rollout gives you time to fix. The 300% support ticket increase has real costs (support team overload, user frustration, potential churn). The right approach is to hold at 10%, investigate the complaints, fix genuine issues, and THEN expand. Expanding before understanding the complaints is like stepping on the gas when your dashboard warning lights are on.`},
+        {text:`A/B test: keep 10% on new design, revert 10% back to old design, and compare 30-day retention. If new design users retain better (despite lower NPS), the redesign is validated. If they retain worse, roll back.`, score:2, feedback:`Using retention as the ultimate arbiter is smart — it's the metric that matters most. But a 30-day retention test takes 30 days, during which unhappy users are churning and posting negative reviews. The NPS drop and social media backlash create real brand damage that a retention test doesn't account for. A better approach: investigate and fix issues now (2 weeks), then use retention as a success metric for the improved redesign. Also, comparing retention for a 2-week-old redesign against a years-old familiar design disadvantages the redesign unfairly — users haven't had time to build new muscle memory.`}
+      ],
+      competency:[1,5,8]
+    },
+    {
+      scenario:`2024 — Validating Canva's Enterprise Pricing Tier\n\nCanva is launching "Canva Enterprise" at $30/user/month (vs. $13/month for Pro and $10/user/month for Teams). Enterprise adds: SSO, advanced permissions, audit logs, custom templates locked to brand, dedicated support, and 99.9% SLA.\n\nThe pricing team ran a Van Westendorp price sensitivity analysis with 200 enterprise prospects:\n• Too cheap: below $15/user/month\n• Too expensive: above $50/user/month\n• Optimal price point: $28/user/month\n• Point of marginal cheapness: $22/user/month\n\nBut the sales team reports: "In actual negotiations, prospects push back hard at $30/month. They compare to Google Workspace ($12/user) and say 'Canva is a design tool, not an office suite — $30 feels like office suite pricing.'"`,
+      question:`How do you validate the right price using research methods?`,
+      options:[
+        {text:`The Van Westendorp survey says $28 is optimal, but sales conversations reveal real-world anchoring effects (Google Workspace at $12). Neither method alone is reliable. Run a pricing experiment: offer different prices ($20, $25, $30) to different prospect cohorts in actual sales conversations. Measure conversion rate AND 12-month retention at each price point. Real purchase behaviour is the ultimate validation.`, score:3, feedback:`This is the most rigorous approach to pricing validation. The Van Westendorp survey measures stated willingness to pay (useful but hypothetical). Sales conversations reveal real objections and anchoring effects. But neither tells you the revenue-maximising price — only actual purchase behaviour can do that. The pricing experiment (different prices to different cohorts) gives you a demand curve: conversion at $20 might be 40%, at $25 it's 30%, at $30 it's 20%. Revenue = price × conversion, so you can calculate the optimal point. Including 12-month retention catches the "cheap but churny" trap: users who convert at $20 might churn faster because they're less committed.`},
+        {text:`Trust the Van Westendorp data — it's a validated methodology with 200 respondents. $28 is the optimal price. The sales team objections are about positioning, not pricing. Train the sales team to frame Canva Enterprise as a "visual communication platform" not a "design tool" to escape the Google Workspace comparison.`, score:2, feedback:`Good insight about the positioning/framing issue — how you describe the product affects price perception. "Visual communication platform" justifies higher pricing than "design tool." But trusting Van Westendorp alone is risky: it measures stated willingness to pay, which systematically overestimates actual conversion. The sales team's real-world feedback is valuable precisely because it reflects actual buying behaviour, not hypothetical responses. The positioning fix might help, but you need to test whether reframing actually changes conversion behaviour, not just assume it will.`},
+        {text:`Drop the price to $22/user/month (the marginal cheapness point). The sales team is telling you that $30 is too high for the market. A lower price with higher conversion will generate more revenue than a higher price with painful sales cycles. Retest in 6 months.`, score:1, feedback:`Dropping to $22 might increase conversion but at a significant cost: $8/user/month revenue reduction per customer. If you have 10,000 enterprise users, that's $960K/year in lost revenue. You're also anchoring Canva Enterprise at a lower price point that's hard to raise later. The sales team's pushback might be about positioning (Canva = design tool, not worth $30) rather than absolute price (they won't pay $30 for anything). Before dropping the price, test whether better positioning or sales enablement can maintain $30. Price cuts should be a last resort, not a first response to sales friction.`},
+        {text:`Create a "good, better, best" tiered structure: $20/user for Enterprise Basic (SSO + brand templates), $30/user for Enterprise Pro (+ audit logs + permissions), $40/user for Enterprise Premium (+ dedicated support + SLA). Test whether tiering changes the price perception and anchoring effects.`, score:2, feedback:`Tiering is a sophisticated pricing strategy that can solve the anchoring problem: $30 feels expensive compared to $12 (Google Workspace), but $30 feels like the sensible middle option between $20 and $40. The decoy effect makes the middle tier the most popular choice. However, you're proposing a structural change based on theory, not testing. Before launching three tiers, validate that the feature splits match what customers actually value. What if SSO and audit logs are equally important and can't be separated? What if nobody wants the $40 tier, making it a useless decoy? Test the tiering structure with real prospects before committing.`}
+      ],
+      competency:[6,9,5]
+    }
+  ]
+};
+// ─── PHASE MANAGEMENT ─────────────────────────────────────
+function showPhase(id){
+  document.querySelectorAll('.phase').forEach(p=>p.classList.remove('active'));
+  document.getElementById('phase-'+id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// ─── ON LOAD ──────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded',()=>{
+  const params = new URLSearchParams(location.search);
+
+  // ?reset=true — clears attempt count
+  if(params.get('reset')==='true'){
+    Object.values(LS).forEach(k=>localStorage.removeItem(k));
+    location.href=location.pathname;
+    return;
+  }
+
+  // ?preview=true — founder mode: no email gate, no attempt limit
+  if(params.get('preview')==='true'){
+    state.name  = 'Preview Mode';
+    state.email = 'preview@cxosimulabs.com';
+    state.currentAttempt = 1;
+    // Show a small founder banner
+    const banner = document.createElement('div');
+    banner.style.cssText='position:fixed;bottom:16px;right:16px;background:#1a1a2e;color:#fff;padding:8px 16px;border-radius:8px;font-size:.78em;font-weight:600;z-index:9999;border:1px solid rgba(226,55,68,.4);';
+    banner.innerHTML='🔧 Founder Preview — <a href="?" style="color:#e23744;text-decoration:none;">Exit</a>';
+    document.body.appendChild(banner);
+    document.getElementById('attempt-badge-display').textContent = '🔧 Preview Mode';
+    showPhase('intro');
+    return;
+  }
+
+  const attempts = parseInt(localStorage.getItem(LS.attempts)||'0');
+  if(attempts>=2){
+    showPhase('blocked');
+  } else {
+    state.currentAttempt = attempts+1;
+    state.name = localStorage.getItem(LS.name)||'';
+    state.email = localStorage.getItem(LS.email)||'';
+    if(state.name && state.email){
+      document.getElementById('attempt-badge-display').textContent = `🎯 Attempt ${state.currentAttempt} of 2`;
+      showPhase('intro');
+    } else {
+      showPhase('email');
+    }
+  }
+});
+
+// ─── LEARN CARDS ──────────────────────────────────────────
+let currentLearnCard = 0;
+function nextLearnCard(){
+  const cards = document.querySelectorAll('.learn-card');
+  if(currentLearnCard < cards.length - 1){
+    cards[currentLearnCard].classList.remove('active');
+    currentLearnCard++;
+    cards[currentLearnCard].classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+}
+
+// ─── EMAIL / OTP ──────────────────────────────────────────
+function sendOTP(){
+  const name  = document.getElementById('input-name').value.trim();
+  const email = document.getElementById('input-email').value.trim();
+  const errEl = document.getElementById('email-error');
+  if(!name || !email || !email.includes('@') || !email.includes('.')){
+    errEl.style.display='block';
+    return;
+  }
+  errEl.style.display='none';
+  state.name  = name;
+  state.email = email;
+  const btn = document.getElementById('send-otp-btn');
+  btn.textContent='Sending…';
+  btn.disabled=true;
+
+  const code = Math.floor(100000+Math.random()*900000).toString();
+  state.otp = code;
+  state.otpExpiry = Date.now() + 10*60*1000;
+  state.otpAttempts = 0;
+
+  // NOTE: Update your EmailJS template to use these variables:
+  // Subject: "Your CXO Simulabs verification code"
+  // Body: "Hi {{to_name}}, your verification code for {{sim_name}} is: {{otp}}
+  //        This code expires in 10 minutes. Do not share it.
+  //        — CXO Simulabs Team | cxosimulabs.com"
+  emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
+    to_name: name,
+    to_email: email,
+    otp: code,
+    sim_name: 'CPO Simulation 14: Canva',
+    message: `Hi ${name},\n\nYour CXO Simulabs verification code for CPO Simulation 14 (Canva) is:\n\n${code}\n\nThis code expires in 10 minutes. Do not share it with anyone.\n\n— CXO Simulabs Team\ncxosimulabs.com`
+  }).then(()=>{
+    gtag('event','otp_requested',{sim:'CPO-SIM-14-Canva'});
+    localStorage.setItem(LS.name, name);
+    localStorage.setItem(LS.email, email);
+    document.getElementById('otp-email-display').textContent = email;
+    showPhase('otp');
+    startOTPTimer();
+  }).catch(()=>{
+    gtag('event','otp_failed',{sim:'CPO-SIM-14-Canva'});
+    btn.textContent='Send Verification Code →';
+    btn.disabled=false;
+    errEl.textContent='Failed to send code. Please try again.';
+    errEl.style.display='block';
+  });
+}
+
+function startOTPTimer(){
+  clearInterval(state.timerInterval);
+  state.timerInterval = setInterval(()=>{
+    const remaining = Math.max(0, state.otpExpiry - Date.now());
+    const m = Math.floor(remaining/60000);
+    const s = Math.floor((remaining%60000)/1000);
+    const el = document.getElementById('otp-timer');
+    if(el) el.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+    if(remaining===0){ clearInterval(state.timerInterval); }
+  },1000);
+}
+
+function verifyOTP(){
+  const input = document.getElementById('input-otp').value.trim();
+  const errEl = document.getElementById('otp-error');
+  const okEl  = document.getElementById('otp-success');
+  errEl.style.display='none';
+  if(Date.now() > state.otpExpiry){
+    errEl.textContent='Code expired. Please request a new one.';
+    errEl.style.display='block';
+    return;
+  }
+  if(input !== state.otp){
+    state.otpAttempts++;
+    errEl.style.display='block';
+    return;
+  }
+  clearInterval(state.timerInterval);
+  okEl.style.display='block';
+  gtag('event','email_verified',{sim:'CPO-SIM-14-Canva'});
+  setTimeout(()=>{
+    document.getElementById('attempt-badge-display').textContent = `🎯 Attempt ${state.currentAttempt} of 2`;
+    showPhase('intro');
+  },800);
+}
+
+function resendOTP(){
+  showPhase('email');
+  document.getElementById('input-name').value = state.name;
+  document.getElementById('input-email').value = state.email;
+}
+
+// ─── SIMULATION ───────────────────────────────────────────
+function startSim(){
+  const questions = Q[state.currentAttempt];
+  state.currentQ = 0;
+  state.answers  = [];
+  state.totalScore = 0;
+  state.maxScore   = questions.reduce((sum,q)=>sum+Math.max(...q.options.map(o=>o.points)),0);
+  gtag('event','sim_started',{sim:'CPO-SIM-14-Canva',attempt:state.currentAttempt});
+  showPhase('questions');
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const questions = Q[state.currentAttempt];
+  const q = questions[state.currentQ];
+  const total = questions.length;
+  const qNum  = state.currentQ+1;
+
+  document.getElementById('q-progress-label').textContent = `Question ${qNum} of ${total}`;
+  document.getElementById('q-score-label').textContent = `Score: ${state.totalScore}`;
+  document.getElementById('progress-fill').style.width = `${((qNum-1)/total)*100}%`;
+
+  // Render scenario with bold headings
+  const scenarioEl = document.getElementById('q-scenario');
+  scenarioEl.innerHTML = q.scenario.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+
+  document.getElementById('q-question').textContent = q.question;
+
+  const optionsEl = document.getElementById('q-options');
+  optionsEl.innerHTML = '';
+  q.options.forEach((opt,i)=>{
+    const div = document.createElement('div');
+    div.className='option';
+    div.textContent=opt.text;
+    div.onclick=()=>selectOption(i);
+    optionsEl.appendChild(div);
+  });
+
+  document.getElementById('q-feedback').style.display='none';
+  document.getElementById('next-btn').style.display='none';
+}
+
+function selectOption(idx){
+  const questions = Q[state.currentAttempt];
+  const q = questions[state.currentQ];
+  const chosen = q.options[idx];
+  const maxPts = Math.max(...q.options.map(o=>o.points));
+
+  // Lock all options — no color change, just prevent re-clicking
+  document.querySelectorAll('.option').forEach(el=>el.classList.add('locked'));
+
+  state.answers.push({q:state.currentQ, chosen:idx, points:chosen.points, maxPts, feedback:chosen.feedback, questionText:q.question});
+  state.totalScore += chosen.points;
+  document.getElementById('q-score-label').textContent = `Score: ${state.totalScore}`;
+
+  // Feedback is revealed at the end — just show Next button
+  document.getElementById('q-feedback').style.display='none';
+  document.getElementById('next-btn').style.display='inline-block';
+  document.getElementById('next-btn').textContent =
+    state.currentQ < questions.length-1 ? 'Next Question →' : 'See My Results →';
+}
+
+function nextQuestion(){
+  const questions = Q[state.currentAttempt];
+  if(state.currentQ < questions.length-1){
+    state.currentQ++;
+    renderQuestion();
+    document.getElementById('phase-questions').querySelector('.q-wrap').scrollTop=0;
+    window.scrollTo(0,0);
+  } else {
+    showResults();
+  }
+}
+
+// ─── RESULTS ──────────────────────────────────────────────
+function showResults(){
+  const pct = Math.round((state.totalScore/state.maxScore)*100);
+  const isPreview = new URLSearchParams(location.search).get('preview')==='true' || !!document.getElementById('founder-badge');
+  if(!isPreview){
+    const attemptsDone = parseInt(localStorage.getItem(LS.attempts)||'0') + 1;
+    localStorage.setItem(LS.attempts, attemptsDone.toString());
+    const scores = JSON.parse(localStorage.getItem(LS.scores)||'[]');
+    scores.push({attempt:state.currentAttempt, score:state.totalScore, pct, date:new Date().toISOString()});
+    localStorage.setItem(LS.scores, JSON.stringify(scores));
+  }
+
+  const tier = pct>=90?'Strategic Mastery':pct>=75?'Applied Proficiency':pct>=60?'Core Competency':'Foundational Understanding';
+  gtag('event','sim_completed',{sim:'CPO-SIM-14-Canva',attempt:state.currentAttempt,score_pct:pct,tier:tier});
+  const tierClass = pct>=90?'tier-mastery':pct>=75?'tier-proficiency':pct>=60?'tier-competency':'tier-foundational';
+  const tierFeedback = {
+    'Strategic Mastery':'Outstanding. You demonstrated the kind of nuanced, first-principles thinking that defines exceptional product leaders.',
+    'Applied Proficiency':'Strong performance. You understand the core frameworks and apply them well. Focus on the questions you missed to sharpen your edge.',
+    'Core Competency':'Good foundations. You got the basics right but there are gaps in some advanced areas. Review the feedback on your lowest-scoring answers.',
+    'Foundational Understanding':'A learning opportunity. The feedback on each question contains the mental models you need. Try Attempt 2 with fresh perspective.'
+  }[tier];
+
+  document.getElementById('results-heading').textContent = `Your Results — Attempt ${state.currentAttempt}`;
+  document.getElementById('result-pct').textContent = pct+'%';
+  document.getElementById('result-score-label').textContent = `${state.totalScore} / ${state.maxScore} pts`;
+
+  const badge = document.getElementById('tier-badge');
+  badge.textContent = tier;
+  badge.className = 'tier-badge '+tierClass;
+  document.getElementById('tier-feedback').textContent = tierFeedback;
+
+  drawScoreRing(pct);
+
+  // Breakdown with full feedback
+  const bd = document.getElementById('q-breakdown');
+  const questions = Q[state.currentAttempt];
+  bd.innerHTML = state.answers.map((a,i)=>{
+    const pctQ = Math.round((a.points/a.maxPts)*100);
+    const dotClass = pctQ>=80?'dot-high':pctQ>=50?'dot-mid':'dot-low';
+    const borderColor = pctQ>=80?'#059669':pctQ>=50?'#d97706':'#dc2626';
+    const chosen = questions[i].options[a.chosen];
+    return `<div style="border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div class="q-dot ${dotClass}"></div>
+        <span style="font-weight:600;font-size:.88em;flex:1;">Q${i+1}: ${questions[i].question}</span>
+        <span style="font-weight:700;font-size:.88em;color:${borderColor};">${a.points}/${a.maxPts}</span>
+      </div>
+      <div style="font-size:.82em;color:var(--muted);margin-bottom:8px;">Your answer: <em>${chosen.text}</em></div>
+      <div style="font-size:.85em;color:#374151;line-height:1.7;background:var(--light);border-left:3px solid ${borderColor};border-radius:0 6px 6px 0;padding:10px 14px;">${a.feedback}</div>
+    </div>`;
+  }).join('');
+
+  // ── Cumulative competency analysis ──
+  const compScores = state.answers.map((a,i)=>({
+    name: COMP_MAP[i]?COMP_MAP[i].name:`Competency ${i+1}`,
+    pct:  Math.round((a.points/a.maxPts)*100)
+  }));
+
+  document.getElementById('competency-bars').innerHTML = compScores.map(c=>{
+    const color = c.pct>=80?'#059669':c.pct>=50?'#d97706':'#dc2626';
+    return `<div class="comp-bar-row">
+      <div class="comp-label">${c.name}</div>
+      <div class="comp-track"><div class="comp-fill" style="width:${c.pct}%;background:${color};"></div></div>
+      <div class="comp-pct">${c.pct}%</div>
+    </div>`;
+  }).join('');
+
+  const sorted = [...compScores].sort((a,b)=>b.pct-a.pct);
+  const strengths = sorted.slice(0,2);
+  const gaps = sorted.slice(-2);
+
+  document.getElementById('strength-tags').innerHTML = strengths.map(s=>`<span class="strength-tag">${s.name}</span>`).join('');
+  document.getElementById('gap-tags').innerHTML = gaps.map(g=>`<span class="gap-tag">${g.name}</span>`).join('');
+
+  const insightText = pct>=90
+    ? `Outstanding across the board. Your ${strengths[0].name} and ${strengths[1].name} scores reflect the kind of first-principles thinking that defines exceptional product leaders. You consistently chose depth over speed, long-term over short-term, and principle over convenience.`
+    : pct>=75
+    ? `Strong CPO instincts. You excelled in ${strengths[0].name} and ${strengths[1].name}, showing real commercial and product maturity. Your development areas — ${gaps[0].name} and ${gaps[1].name} — are exactly where the highest-impact CPOs differentiate themselves as they scale.`
+    : pct>=60
+    ? `Solid foundations with clear growth areas. You showed genuine competency in ${strengths[0].name} and ${strengths[1].name}, but the gaps in ${gaps[0].name} and ${gaps[1].name} reveal where your thinking can deepen. Review the expert feedback on your lowest-scoring answers — those mental models are what separates good from great at CPO level.`
+    : `This simulation is designed to challenge. Your instincts in ${strengths[0].name} showed promise. The gaps in ${gaps[0].name} and ${gaps[1].name} reveal where CPO-level thinking diverges most sharply from general product management. Use the feedback from this round to recalibrate — Attempt 2 gives you fresh scenarios to apply these lessons.`;
+
+  document.getElementById('insight-text').textContent = insightText;
+
+  // Show "next sim" banner and attempt 2 prompt
+  const isPreview2 = new URLSearchParams(location.search).get('preview')==='true' || !!document.getElementById('founder-badge');
+  if(isPreview2){
+    document.getElementById('attempt2-prompt').style.display='block';
+    document.getElementById('next-sim-banner').style.display='none';
+  } else if(state.currentAttempt===1){
+    document.getElementById('attempt2-prompt').style.display='block';
+    document.getElementById('next-sim-banner').style.display='none';
+  } else {
+    document.getElementById('attempt2-prompt').style.display='none';
+    document.getElementById('next-sim-banner').style.display='flex';
+  }
+
+  drawCertificate(pct, tier);
+  drawBadge(pct, tier);
+  showPhase('results');
+}
+
+function startAttempt2(){
+  state.currentAttempt = 2;
+  showPhase('intro');
+  document.getElementById('attempt-badge-display').textContent = '🎯 Attempt 2 of 2';
+}
+
+// ─── SCORE RING ───────────────────────────────────────────
+function drawScoreRing(pct){
+  const canvas = document.getElementById('scoreRingCanvas');
+  const ctx = canvas.getContext('2d');
+  const cx=80, cy=80, r=65, lw=12;
+  ctx.clearRect(0,0,160,160);
+  ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2);
+  ctx.strokeStyle='#e5e7eb'; ctx.lineWidth=lw; ctx.stroke();
+  const angle = (pct/100)*Math.PI*2 - Math.PI/2;
+  ctx.beginPath(); ctx.arc(cx,cy,r,-Math.PI/2,angle);
+  ctx.strokeStyle = pct>=90?'#16a34a':pct>=75?'#2563eb':pct>=60?'#d97706':'#dc2626';
+  ctx.lineWidth=lw; ctx.lineCap='round'; ctx.stroke();
+}
+
+// ─── SHARED HELPERS ───────────────────────────────────────
+function drawLogoText(ctx, x, y, size='bold 15px'){
+  ctx.font=`${size} Inter, Arial, sans-serif`;
+  ctx.textAlign='left';
+  const cxoW=ctx.measureText('CXO').width;
+  ctx.fillStyle='#1a1a2e'; ctx.fillText('CXO',x,y);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',x+cxoW,y);
+}
+function centeredLogo(ctx, W, y, size='bold 15px'){
+  ctx.font=`${size} Inter, Arial, sans-serif`;
+  const total=ctx.measureText('CXO Simulabs').width;
+  const cxoW=ctx.measureText('CXO').width;
+  const sx=W/2-total/2;
+  ctx.fillStyle='#1a1a2e'; ctx.fillText('CXO',sx,y);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',sx+cxoW,y);
+}
+
+// ─── CERTIFICATE ──────────────────────────────────────────
+function drawCertificate(pct, tier){
+  const canvas = document.getElementById('certCanvas');
+  const ctx = canvas.getContext('2d');
+  const W=1200, H=850;
+  canvas.width=W; canvas.height=H;
+  ctx.clearRect(0,0,W,H);
+  const CX=W/2; // center x for alignment
+  const gold='#c9a84c';
+
+  // ── Dark gradient background ──
+  const bg=ctx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#0c1221'); bg.addColorStop(0.5,'#131b2e'); bg.addColorStop(1,'#1a1a2e');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+
+  // ── Subtle dot grid ──
+  ctx.fillStyle='rgba(255,255,255,0.018)';
+  for(let x=0;x<W;x+=40)for(let y=0;y<H;y+=40){ctx.beginPath();ctx.arc(x,y,1.2,0,Math.PI*2);ctx.fill();}
+
+  // ── Gold accent bar at top ──
+  const topGrad=ctx.createLinearGradient(0,0,W,0);
+  topGrad.addColorStop(0,'#c9a84c'); topGrad.addColorStop(0.5,'#e8d48b'); topGrad.addColorStop(1,'#c9a84c');
+  ctx.fillStyle=topGrad; ctx.fillRect(0,0,W,5);
+
+  // ── Border frame ──
+  ctx.strokeStyle='rgba(201,168,76,0.25)'; ctx.lineWidth=1;
+  ctx.strokeRect(24,24,W-48,H-48);
+
+  // ── Corner ornaments ──
+  [[26,26,1,1],[W-26,26,-1,1],[26,H-26,1,-1],[W-26,H-26,-1,-1]].forEach(([x,y,sx,sy])=>{
+    ctx.strokeStyle='rgba(201,168,76,0.4)'; ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+sx*32,y);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+sy*32);ctx.stroke();
+  });
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 1: HEADER — Logo + Track (y: 60–120)
+  // ═══════════════════════════════════════════════════════════
+  ctx.textAlign='left';
+  ctx.font='bold 26px Inter, Arial, sans-serif';
+  const cxoW=ctx.measureText('CXO').width;
+  const slW=ctx.measureText(' Simulabs').width;
+  const logoX=CX-(cxoW+slW)/2;
+  ctx.fillStyle='#ffffff'; ctx.fillText('CXO',logoX,72);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',logoX+cxoW,72);
+
+  ctx.textAlign='center';
+  ctx.font='600 11px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='3px';
+  ctx.fillText('CPO TRACK  ·  SIMULATION 14',CX,98);
+  ctx.letterSpacing='0';
+
+  // Gold divider with diamond
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(CX-110,116);ctx.lineTo(CX+110,116);ctx.stroke();
+  ctx.fillStyle=gold;
+  ctx.beginPath();ctx.moveTo(CX,112);ctx.lineTo(CX+4,116);ctx.lineTo(CX,120);ctx.lineTo(CX-4,116);ctx.closePath();ctx.fill();
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 2: TITLE (y: 140–160)
+  // ═══════════════════════════════════════════════════════════
+  ctx.letterSpacing='6px';
+  ctx.font='600 13px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold;
+  ctx.fillText('SIMULATION COMPLETION RECORD',CX,152);
+  ctx.letterSpacing='0';
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 3: NAME (y: 185–290)
+  // ═══════════════════════════════════════════════════════════
+  ctx.font='italic 15px Georgia, serif';
+  ctx.fillStyle='rgba(255,255,255,0.4)';
+  ctx.fillText('This certifies that',CX,200);
+
+  const name=state.name||state.email;
+  ctx.font='bold 52px Georgia, "Times New Roman", serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(name,CX,260);
+
+  // Gold fading underline
+  const nw=Math.min(ctx.measureText(name).width+60,W-200);
+  const ulGrad=ctx.createLinearGradient(CX-nw/2,0,CX+nw/2,0);
+  ulGrad.addColorStop(0,'rgba(201,168,76,0)'); ulGrad.addColorStop(0.3,'rgba(201,168,76,0.45)');
+  ulGrad.addColorStop(0.5,'rgba(201,168,76,0.65)'); ulGrad.addColorStop(0.7,'rgba(201,168,76,0.45)');
+  ulGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=ulGrad; ctx.lineWidth=1.2;
+  ctx.beginPath();ctx.moveTo(CX-nw/2,275);ctx.lineTo(CX+nw/2,275);ctx.stroke();
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 4: ACHIEVEMENT — Competency HERO, company secondary (y: 300–400)
+  // ═══════════════════════════════════════════════════════════
+  ctx.font='italic 14px Georgia, serif';
+  ctx.fillStyle='rgba(255,255,255,0.38)';
+  ctx.fillText('has completed a learning simulation exploring',CX,316);
+
+  // COMPETENCY = THE HERO
+  ctx.font='bold 28px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText('User Testing & Validation',CX,358);
+
+  // Company = secondary context
+  ctx.font='15px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.35)';
+  ctx.fillText('through the Canva case simulation',CX,390);
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 5: METRICS — Score / Tier / Date (y: 430–560)
+  // ═══════════════════════════════════════════════════════════
+  // Horizontal divider above metrics
+  const divGrad1=ctx.createLinearGradient(100,0,W-100,0);
+  divGrad1.addColorStop(0,'rgba(201,168,76,0)'); divGrad1.addColorStop(0.2,'rgba(201,168,76,0.2)');
+  divGrad1.addColorStop(0.5,'rgba(201,168,76,0.3)'); divGrad1.addColorStop(0.8,'rgba(201,168,76,0.2)');
+  divGrad1.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=divGrad1; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(100,420);ctx.lineTo(W-100,420);ctx.stroke();
+
+  const metricsY=488; // vertical center for all 3 columns
+  const colL=240, colC=CX, colR=W-240; // 3 evenly spaced columns
+  const ringColor=pct>=90?'#4ade80':pct>=75?'#60a5fa':pct>=60?'#fbbf24':'#f87171';
+
+  // — SCORE (left) — with ring
+  const ringR=58, ringLw=8;
+  ctx.beginPath();ctx.arc(colL,metricsY,ringR,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.lineWidth=ringLw; ctx.stroke();
+  const angle=(pct/100)*Math.PI*2-Math.PI/2;
+  ctx.beginPath();ctx.arc(colL,metricsY,ringR,-Math.PI/2,angle);
+  ctx.strokeStyle=ringColor; ctx.lineWidth=ringLw; ctx.lineCap='round'; ctx.stroke();
+  ctx.lineCap='butt';
+  ctx.font='bold 44px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(pct+'%',colL,metricsY+14);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('SCORE',colL,metricsY+38);
+  ctx.letterSpacing='0';
+
+  // — TIER (center) —
+  ctx.font='bold 26px Inter, Arial, sans-serif';
+  ctx.fillStyle=ringColor;
+  ctx.fillText(tier,colC,metricsY+8);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('PERFORMANCE TIER',colC,metricsY+32);
+  ctx.letterSpacing='0';
+
+  // — DATE (right) —
+  const d=new Date();
+  const dateStr=d.toLocaleString('default',{month:'long'})+' '+d.getDate()+', '+d.getFullYear();
+  ctx.font='bold 20px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(dateStr,colR,metricsY+8);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('DATE ISSUED',colR,metricsY+32);
+  ctx.letterSpacing='0';
+
+  // Vertical separators between columns
+  ctx.strokeStyle='rgba(201,168,76,0.15)'; ctx.lineWidth=0.8;
+  const sepTop=metricsY-52, sepBot=metricsY+48;
+  ctx.beginPath();ctx.moveTo((colL+colC)/2,sepTop);ctx.lineTo((colL+colC)/2,sepBot);ctx.stroke();
+  ctx.beginPath();ctx.moveTo((colC+colR)/2,sepTop);ctx.lineTo((colC+colR)/2,sepBot);ctx.stroke();
+
+  // Horizontal divider below metrics
+  ctx.strokeStyle=divGrad1; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(100,556);ctx.lineTo(W-100,556);ctx.stroke();
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 6: COMPETENCIES ASSESSED (y: 580–680)
+  // ═══════════════════════════════════════════════════════════
+  ctx.letterSpacing='2.5px';
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold;
+  ctx.fillText('COMPETENCIES ASSESSED',CX,586);
+  ctx.letterSpacing='0';
+
+  const comps=COMP_MAP.map(c=>c.name);
+  ctx.font='11.5px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.45)';
+  // 2 rows of 5, evenly spaced
+  const compStartX=160, compSpacing=220;
+  comps.slice(0,5).forEach((c,i)=>{ctx.fillText(c,compStartX+i*compSpacing,614);});
+  comps.slice(5,10).forEach((c,i)=>{ctx.fillText(c,compStartX+i*compSpacing,640);});
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 7: FOOTER (y: 780–830)
+  // ═══════════════════════════════════════════════════════════
+  // Seal (bottom-right)
+  const sealX=W-90, sealY=H-85, sealR=32;
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=1.2;
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR,0,Math.PI*2);ctx.stroke();
+  ctx.strokeStyle='rgba(201,168,76,0.12)'; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR-6,0,Math.PI*2);ctx.stroke();
+  ctx.fillStyle='rgba(201,168,76,0.04)';
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR,0,Math.PI*2);ctx.fill();
+  ctx.font='bold 7px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='1.5px';
+  ctx.fillText('COMPLETED',sealX,sealY-6);
+  ctx.letterSpacing='0';
+  ctx.font='bold 18px Arial';
+  ctx.fillStyle=gold;
+  ctx.fillText('✓',sealX,sealY+10);
+
+  // Footer divider
+  const footGrad=ctx.createLinearGradient(50,0,W-50,0);
+  footGrad.addColorStop(0,'rgba(201,168,76,0)'); footGrad.addColorStop(0.3,'rgba(201,168,76,0.2)');
+  footGrad.addColorStop(0.5,'rgba(201,168,76,0.3)'); footGrad.addColorStop(0.7,'rgba(201,168,76,0.2)');
+  footGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=footGrad; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(50,H-55);ctx.lineTo(W-50,H-55);ctx.stroke();
+
+  // Footer text
+  ctx.textAlign='left';
+  ctx.font='12px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.fillText('© 2026 CXO Simulabs  ·  Not a professional certification  ·  Not affiliated with Canva Pty Ltd',55,H-32);
+  ctx.textAlign='right';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.font='bold 11px Inter, Arial, sans-serif';
+  ctx.fillText('www.cxosimulabs.com',W-55,H-32);
+}
+
+// ─── INSTAGRAM BADGE ──────────────────────────────────────
+function drawBadge(pct, tier){
+  const canvas=document.getElementById('badgeCanvas');
+  const ctx=canvas.getContext('2d');
+  const S=1080;
+  ctx.clearRect(0,0,S,S);
+  const C=S/2; // center
+  const gold='#c9a84c';
+
+  // ── Dark gradient background ──
+  const bg=ctx.createLinearGradient(0,0,S,S);
+  bg.addColorStop(0,'#0c1221'); bg.addColorStop(0.5,'#131b2e'); bg.addColorStop(1,'#1a1a2e');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,S,S);
+
+  // ── Subtle dot grid ──
+  ctx.fillStyle='rgba(255,255,255,0.018)';
+  for(let x=0;x<S;x+=44)for(let y=0;y<S;y+=44){ctx.beginPath();ctx.arc(x,y,1.2,0,Math.PI*2);ctx.fill();}
+
+  // ── Gold bar top ──
+  const topGrad=ctx.createLinearGradient(0,0,S,0);
+  topGrad.addColorStop(0,'#c9a84c'); topGrad.addColorStop(0.5,'#e8d48b'); topGrad.addColorStop(1,'#c9a84c');
+  ctx.fillStyle=topGrad; ctx.fillRect(0,0,S,6);
+
+  // ── Border + corners ──
+  ctx.strokeStyle='rgba(201,168,76,0.25)'; ctx.lineWidth=1;
+  ctx.strokeRect(24,24,S-48,S-48);
+  [[26,26,1,1],[S-26,26,-1,1],[26,S-26,1,-1],[S-26,S-26,-1,-1]].forEach(([x,y,sx,sy])=>{
+    ctx.strokeStyle='rgba(201,168,76,0.4)'; ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+sx*28,y);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+sy*28);ctx.stroke();
+  });
+
+  // ── Logo ──
+  ctx.textAlign='left';
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  const cW=ctx.measureText('CXO').width;
+  const sW=ctx.measureText(' Simulabs').width;
+  const lStart=C-(cW+sW)/2;
+  ctx.fillStyle='#ffffff'; ctx.fillText('CXO',lStart,82);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',lStart+cW,82);
+
+  // ── Track label ──
+  ctx.textAlign='center';
+  ctx.font='600 13px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='3px';
+  ctx.fillText('CPO TRACK  ·  SIMULATION 14',C,114);
+  ctx.letterSpacing='0';
+
+  // ── Gold divider ──
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(C-100,134);ctx.lineTo(C+100,134);ctx.stroke();
+  ctx.fillStyle=gold;
+  ctx.beginPath();ctx.moveTo(C,130);ctx.lineTo(C+4,134);ctx.lineTo(C,138);ctx.lineTo(C-4,134);ctx.closePath();ctx.fill();
+
+  // ── Competency HERO ──
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText('Product',C,186);
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.fillText('User Testing & Validation',C,228);
+
+  // ── Company context ──
+  ctx.font='16px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)';
+  ctx.fillText('Canva case simulation',C,262);
+
+  // ── Name ──
+  const name=state.name||state.email;
+  ctx.font='bold 40px Georgia, "Times New Roman", serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(name,C,320);
+  // Gold underline
+  const nw2=Math.min(ctx.measureText(name).width+40,S-120);
+  const ulGrad=ctx.createLinearGradient(C-nw2/2,0,C+nw2/2,0);
+  ulGrad.addColorStop(0,'rgba(201,168,76,0)'); ulGrad.addColorStop(0.3,'rgba(201,168,76,0.4)');
+  ulGrad.addColorStop(0.5,'rgba(201,168,76,0.55)'); ulGrad.addColorStop(0.7,'rgba(201,168,76,0.4)');
+  ulGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=ulGrad; ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(C-nw2/2,334);ctx.lineTo(C+nw2/2,334);ctx.stroke();
+
+  // ── Score ring ──
+  const ringCY=560, r=170, lw=22;
+  ctx.beginPath();ctx.arc(C,ringCY,r,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.lineWidth=lw; ctx.stroke();
+  const angle=(pct/100)*Math.PI*2-Math.PI/2;
+  const ringColor=pct>=90?'#4ade80':pct>=75?'#60a5fa':pct>=60?'#fbbf24':'#f87171';
+  ctx.beginPath();ctx.arc(C,ringCY,r,-Math.PI/2,angle);
+  ctx.strokeStyle=ringColor; ctx.lineWidth=lw; ctx.lineCap='round'; ctx.stroke();
+  ctx.lineCap='butt';
+
+  // Score text
+  ctx.font='bold 120px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(pct+'%',C,ringCY+40);
+
+  // Tier
+  ctx.font='bold 30px Inter, Arial, sans-serif';
+  ctx.fillStyle=ringColor;
+  ctx.fillText(tier,C,ringCY+88);
+
+  // ── Footer ──
+  const fDivGrad=ctx.createLinearGradient(40,0,S-40,0);
+  fDivGrad.addColorStop(0,'rgba(201,168,76,0)'); fDivGrad.addColorStop(0.3,'rgba(201,168,76,0.2)');
+  fDivGrad.addColorStop(0.5,'rgba(201,168,76,0.3)'); fDivGrad.addColorStop(0.7,'rgba(201,168,76,0.2)');
+  fDivGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=fDivGrad; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(40,S-100);ctx.lineTo(S-40,S-100);ctx.stroke();
+
+  // Seal bottom-right
+  const sealX=S-90, sealY=S-58;
+  ctx.strokeStyle='rgba(201,168,76,0.28)'; ctx.lineWidth=1;
+  ctx.beginPath();ctx.arc(sealX,sealY,22,0,Math.PI*2);ctx.stroke();
+  ctx.font='bold 14px Arial'; ctx.fillStyle=gold;
+  ctx.fillText('✓',sealX,sealY+5);
+
+  ctx.font='bold 22px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.45)';
+  ctx.fillText('www.cxosimulabs.com',C,S-52);
+
+  ctx.font='14px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.2)';
+  ctx.fillText('Try the free simulation →',C,S-28);
+}
+
+function getPctTier(){
+  return {
+    pct: parseInt(document.getElementById('result-pct').textContent),
+    tier: document.getElementById('tier-badge').textContent
+  };
+}
+function downloadCert(){
+  const {pct,tier}=getPctTier();
+  gtag('event','cert_downloaded',{sim:'CPO-SIM-14-Canva',score_pct:pct,tier:tier});
+  const canvas=document.getElementById('certCanvas');
+  canvas.width=1200; canvas.height=850;
+  drawCertificate(pct,tier);
+  const link=document.createElement('a');
+  link.download=`CXO-Simulabs-Certificate-${(state.name||'').replace(/\s/g,'-')}.png`;
+  link.href=canvas.toDataURL('image/png'); link.click();
+}
+function downloadBadge(){
+  const {pct,tier}=getPctTier();
+  gtag('event','badge_downloaded',{sim:'CPO-SIM-14-Canva',score_pct:pct,tier:tier});
+  const canvas=document.getElementById('badgeCanvas');
+  drawBadge(pct,tier);
+  const link=document.createElement('a');
+  link.download=`CXO-Simulabs-Badge-${(state.name||'').replace(/\s/g,'-')}.png`;
+  link.href=canvas.toDataURL('image/png'); link.click();
+}
+function shareCanva(){
+  gtag('event','share_linkedin',{sim:'CPO-SIM-14-Canva'});
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`I just scored ${pct}% (${tier}) on the Canva User Testing & Validation Simulation by CXO Simulabs — 10 real product decisions, expert feedback.\n\nTry it free: https://cxosimulabs.com\n\n#ProductManagement #CPO #CXOSimulabs #UserResearch`);
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcxosimulabs.com&summary=${text}`,'_blank');
+}
+function shareTwitter(){
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`Just scored ${pct}% (${tier}) on the Canva User Testing & Validation Simulation by @CXOSimulabs — 10 real product decisions, expert feedback. Try it free 👇\nhttps://cxosimulabs.com\n#CPO #ProductManagement #UserResearch`);
+  window.open(`https://twitter.com/intent/tweet?text=${text}`,'_blank');
+}
+function shareWhatsApp(){
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`I scored ${pct}% (${tier}) on the Canva Platform Strategy Simulation by CXO Simulabs — 10 real product decisions with expert feedback. Try it free: https://cxosimulabs.com`);
+  window.open(`https://wa.me/?text=${text}`,'_blank');
+}
+function copyLink(){
+  navigator.clipboard.writeText('https://cxosimulabs.com').then(()=>{
+    const btn=document.getElementById('copy-link-btn');
+    btn.textContent='✓ Copied!';
+    setTimeout(()=>btn.textContent='Copy Link',2000);
+  });
+}
+</script>
+</body>
+</html>
